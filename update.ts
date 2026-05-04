@@ -28,21 +28,15 @@ async function setReleaseUpdatedAt(name: string, updatedAt: string) {
 }
 
 async function gh(owner: string, repo: string) {
-    const releases = await octokit.request("GET /repos/{owner}/{repo}/releases", { owner, repo });
-    for (const release of releases.data) {
-        if (!isReleaseUpToDate(`gh/${owner}/${repo}`, release.updated_at || release.published_at || release.created_at))
+    const { data: release } = await octokit.request("GET /repos/{owner}/{repo}/releases/latest", { owner, repo });
+    if (!isReleaseUpToDate(`gh/${owner}/${repo}`, release.updated_at || release.published_at || release.created_at))
+        return;
+    for (const asset of release.assets) {
+        if (asset.content_type !== "application/vnd.android.package-archive")
             continue;
-        for (const asset of release.assets) {
-            if (asset.content_type !== "application/vnd.android.package-archive")
-                continue;
-            console.log("download: %s", asset.browser_download_url);
-            await Bun.$`curl -L ${asset.browser_download_url} -o ${`${Bun.randomUUIDv7("hex")}.apk`}`.cwd(`${process.env.FDROID_DIR}/repo`);
-        }
-
-        if (!release.prerelease)
-            break;
+        console.log("download: %s", asset.browser_download_url);
+        await Bun.$`curl -L ${asset.browser_download_url} -o ${`${Bun.randomUUIDv7("hex")}.apk`}`.cwd(`${process.env.FDROID_DIR}/repo`);
     }
-
     await setReleaseUpdatedAt(`gh/${owner}/${repo}`, new Date().toISOString());
 }
 
