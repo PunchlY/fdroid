@@ -10,7 +10,7 @@ on:
 jobs:
   apps:
     runs-on: ubuntu-latest
-    container: registry.gitlab.com/fdroid/fdroidserver:buildserver-trixie
+
     steps:
       - uses: actions/checkout@v4
 
@@ -37,10 +37,16 @@ jobs:
       - name: Run update script
         run: bash update.sh
 
+      - name: Install fdroidserver
+        run: |
+          sudo add-apt-repository ppa:fdroid/fdroidserver
+          sudo apt-get update
+          sudo apt-get install -y fdroidserver
+
       - name: Build repo
         run: |
           cd fdroid
-
+          
           echo "$KEYSTORE_P12" | base64 -d > keystore.p12
           echo "$CONFIG_YML" | base64 -d > config.yml
           fdroid update -c
