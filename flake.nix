@@ -13,8 +13,11 @@
         packages = with pkgsFor.${system}; [
           fdroidserver
           jdk
-          jq
+          bun
         ];
+        shellHook = ''
+          bun install --frozen-lockfile --linker isolated
+        '';
       };
     });
   };

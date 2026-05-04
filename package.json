@@ -1,0 +1,15 @@
+{
+  "name": "fdroid",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "1.3.11"
+  },
+  "dependencies": {
+    "octokit": "^5.0.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
