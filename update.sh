@@ -1,11 +1,24 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OUT_DIR="$(pwd)/fdroid/repo"
-
 OWNER="open-ani"
 REPO="animeko"
 APPNAME="animeko"
+
+git fetch origin repo || true
+
+if git show-ref --verify --quiet refs/remotes/origin/repo; then
+  git worktree add -B repo fdroid origin/repo
+else
+  git worktree add -B repo --orphan fdroid
+  cd fdroid
+
+  git commit --allow-empty -m "init repo branch"
+
+  cd ..
+fi
+
+OUT_DIR="$(pwd)/fdroid/repo"
 
 mkdir -p "$OUT_DIR"
 
@@ -33,3 +46,18 @@ curl -s "https://api.github.com/repos/$OWNER/$REPO/releases" | jq -c 'reduce .[]
     curl -L "$url" -o "$file"
   done
 done
+
+cd fdroid
+
+echo "$KEYSTORE_P12" | base64 -d > keystore.p12
+echo "$CONFIG_YML" | base64 -d > config.yml
+fdroid update -c
+
+git add repo metadata
+git add -u repo metadata
+
+git commit -m "update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || echo "no changes"
+
+git push origin repo --force-with-lease || git push origin repo --force
+
+cd ..

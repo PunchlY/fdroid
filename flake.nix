@@ -6,13 +6,7 @@
 
   outputs = inputs: let
     eachSystem = inputs.nixpkgs.lib.genAttrs (import inputs.systems);
-    pkgsFor = eachSystem (
-      system:
-        import inputs.nixpkgs {
-          inherit system;
-          overlays = [];
-        }
-    );
+    pkgsFor = eachSystem (system: import inputs.nixpkgs {inherit system;});
   in {
     devShells = eachSystem (system: {
       default = pkgsFor.${system}.mkShell {

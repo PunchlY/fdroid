@@ -9,59 +9,19 @@ on:
 
 jobs:
   apps:
+    name: "Generate repo from apps listing"
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+      - uses: cachix/install-nix-action@v31
 
       - name: Configure git
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-      - name: Prepare worktree
-        run: |
-          git fetch origin repo || true
-
-          if git show-ref --verify --quiet refs/remotes/origin/repo; then
-            git worktree add -B repo fdroid origin/repo
-          else
-            git worktree add -B repo --orphan fdroid
-            cd fdroid
-
-            git commit --allow-empty -m "init repo branch"
-
-            cd ..
-          fi
-
-      - name: Run update script
-        run: bash update.sh
-
-      - name: Install fdroidserver
-        run: |
-          sudo add-apt-repository ppa:fdroid/fdroidserver
-          sudo apt-get update
-          sudo apt-get install -y fdroidserver
-
-      - name: Build repo
-        run: |
-          cd fdroid
-          
-          echo "${{ secrets.KEYSTORE_P12 }}" | base64 -d > keystore.p12
-          echo "${{ secrets.CONFIG_YML }}" | base64 -d > config.yml
-          fdroid update -c
-
-          cd ..
-
-      - name: Commit & push
-        run: |
-          cd fdroid
-
-          git add repo metadata
-          git add -u repo metadata
-
-          git commit -m "update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || echo "no changes"
-
-          git push origin repo --force-with-lease || git push origin repo --force
-
-          cd ..
+      - run: nix develop . --command bash update.sh
+        env:
+          KEYSTORE_P12: ${{ secrets.KEYSTORE_P12 }}
+          CONFIG_YML: ${{ secrets.CONFIG_YML }}
