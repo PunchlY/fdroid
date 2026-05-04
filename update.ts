@@ -50,4 +50,6 @@ await gh("bggRGjQaUbCoE", "PiliPlus");
 
 await gh("SlotSun", "dart_simple_live");
 
+await gh("cwuom", "NeriPlayer");
+
 await Bun.$`fdroid update --create-metadata --rename-apks --use-date-from-apk --pretty --delete-unknown`.cwd(process.env.FDROID_DIR);
