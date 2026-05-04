@@ -14,7 +14,7 @@
       }
     },
     "address": "https://MyFirstFDroidRepo.org/fdroid/repo",
-    "timestamp": 1777874161000,
+    "timestamp": 1777921956000,
     "categories": {
       "fdroid": {
         "name": {
@@ -179,19 +179,261 @@
         }
       }
     },
+    "com.slotsun.slive": {
+      "metadata": {
+        "added": 1777921943000,
+        "categories": [
+          "fdroid"
+        ],
+        "lastUpdated": 1777921945000,
+        "name": {
+          "en-US": "Slive"
+        },
+        "preferredSigner": "680b0d6171888e9363e2952af2c1d507e69a9482ba919d3c851f3819781e2de3"
+      },
+      "versions": {
+        "922ca8bc7565f84a511eeb735f724bdb8bd3e644b27b7f73feaf85327e1cba60": {
+          "added": 1777921945000,
+          "file": {
+            "name": "/com.slotsun.slive_14804.apk",
+            "sha256": "922ca8bc7565f84a511eeb735f724bdb8bd3e644b27b7f73feaf85327e1cba60",
+            "size": 21007203
+          },
+          "manifest": {
+            "nativecode": [
+              "x86_64"
+            ],
+            "versionName": "1.8.4",
+            "versionCode": 14804,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "680b0d6171888e9363e2952af2c1d507e69a9482ba919d3c851f3819781e2de3"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "com.slotsun.slive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              },
+              {
+                "name": "android.permission.CAMERA"
+              }
+            ]
+          }
+        },
+        "dd2e8d1c174019fab39007860ae5513cec20fafa42ac1f52f1d49fdc2e26f30c": {
+          "added": 1777921943000,
+          "file": {
+            "name": "/com.slotsun.slive_12804.apk",
+            "sha256": "dd2e8d1c174019fab39007860ae5513cec20fafa42ac1f52f1d49fdc2e26f30c",
+            "size": 19979337
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a"
+            ],
+            "versionName": "1.8.4",
+            "versionCode": 12804,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "680b0d6171888e9363e2952af2c1d507e69a9482ba919d3c851f3819781e2de3"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "com.slotsun.slive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              },
+              {
+                "name": "android.permission.CAMERA"
+              }
+            ]
+          }
+        },
+        "a4f24b9f1a90fc8ff5120dbd76d5debe88616e9aba23ff2e5c418add1d160c9a": {
+          "added": 1777921944000,
+          "file": {
+            "name": "/com.slotsun.slive_11804.apk",
+            "sha256": "a4f24b9f1a90fc8ff5120dbd76d5debe88616e9aba23ff2e5c418add1d160c9a",
+            "size": 19471013
+          },
+          "manifest": {
+            "nativecode": [
+              "armeabi-v7a"
+            ],
+            "versionName": "1.8.4",
+            "versionCode": 11804,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "680b0d6171888e9363e2952af2c1d507e69a9482ba919d3c851f3819781e2de3"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "com.slotsun.slive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              },
+              {
+                "name": "android.permission.CAMERA"
+              }
+            ]
+          }
+        }
+      }
+    },
     "com.zephyr.breeze": {
       "metadata": {
         "added": 1777874149000,
         "categories": [
           "fdroid"
         ],
-        "lastUpdated": 1777874150000,
+        "lastUpdated": 1777921942000,
         "name": {
           "en-US": "Breeze"
         },
         "preferredSigner": "858f47c5f7f9a1c00a4026bab2a2f80735ca5972da9f386a618e78f9d53e1e74"
       },
       "versions": {
+        "b8a2ed9451d4ec8a638c5b54ab6a1f69f5c31c3ff1024d781801ad69d2e33a65": {
+          "added": 1777921942000,
+          "file": {
+            "name": "/com.zephyr.breeze_6194.apk",
+            "sha256": "b8a2ed9451d4ec8a638c5b54ab6a1f69f5c31c3ff1024d781801ad69d2e33a65",
+            "size": 22450406
+          },
+          "manifest": {
+            "nativecode": [
+              "x86_64"
+            ],
+            "versionName": "3.0.7",
+            "versionCode": 6194,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "858f47c5f7f9a1c00a4026bab2a2f80735ca5972da9f386a618e78f9d53e1e74"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_IMAGES"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_VIDEO"
+              },
+              {
+                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+              },
+              {
+                "name": "android.permission.SCHEDULE_EXACT_ALARM"
+              },
+              {
+                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "3c3cd429aaed5cc6fe3cbe72cea6dafab3e46283c6d46dcbcbe0277ff7656cd8": {
           "added": 1777874150000,
           "file": {
@@ -269,6 +511,83 @@
             ]
           }
         },
+        "b8e8ec3ed71bc7f12e228bc5f75a4a1fcff6d1fa89474d4fb83509ba8253ba30": {
+          "added": 1777921940000,
+          "file": {
+            "name": "/com.zephyr.breeze_4194.apk",
+            "sha256": "b8e8ec3ed71bc7f12e228bc5f75a4a1fcff6d1fa89474d4fb83509ba8253ba30",
+            "size": 21895866
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a"
+            ],
+            "versionName": "3.0.7",
+            "versionCode": 4194,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "858f47c5f7f9a1c00a4026bab2a2f80735ca5972da9f386a618e78f9d53e1e74"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_IMAGES"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_VIDEO"
+              },
+              {
+                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+              },
+              {
+                "name": "android.permission.SCHEDULE_EXACT_ALARM"
+              },
+              {
+                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "3a729b03505e10dea722238941d5da7f070b4732627a2d5fcb847ea22c92814e": {
           "added": 1777874149000,
           "file": {
@@ -282,6 +601,83 @@
             ],
             "versionName": "3.0.6",
             "versionCode": 4193,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "858f47c5f7f9a1c00a4026bab2a2f80735ca5972da9f386a618e78f9d53e1e74"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_IMAGES"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_VIDEO"
+              },
+              {
+                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+              },
+              {
+                "name": "android.permission.SCHEDULE_EXACT_ALARM"
+              },
+              {
+                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "dcdbf8a9e2a2ee8cefed7f74eb7ae11438d6d36ea11e5bc99bac367df382864d": {
+          "added": 1777921941000,
+          "file": {
+            "name": "/com.zephyr.breeze_3194.apk",
+            "sha256": "dcdbf8a9e2a2ee8cefed7f74eb7ae11438d6d36ea11e5bc99bac367df382864d",
+            "size": 21136710
+          },
+          "manifest": {
+            "nativecode": [
+              "armeabi-v7a"
+            ],
+            "versionName": "3.0.7",
+            "versionCode": 3194,
             "usesSdk": {
               "minSdkVersion": 24,
               "targetSdkVersion": 36

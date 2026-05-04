@@ -12,37 +12,40 @@
     "--delete-unknown"
   ],
   "disabled": [],
-  "endTimestamp": 1777874164665,
+  "endTimestamp": 1777921959876,
   "failedBuilds": {},
   "jarsigner": "/nix/store/c3pl7bqrx3d2rc3dh98z6yaj0mv1p52g-openjdk-21.0.10+7/bin/jarsigner",
   "keytool": "/nix/store/c3pl7bqrx3d2rc3dh98z6yaj0mv1p52g-openjdk-21.0.10+7/bin/keytool",
   "needsUpdate": [
     "com.example.piliplus",
+    "com.slotsun.slive",
     "com.zephyr.breeze",
     "io.legato.kazusa",
     "me.him188.ani"
   ],
   "noPackages": [
     "com.example.piliplus",
+    "com.slotsun.slive",
     "com.zephyr.breeze",
     "io.legato.kazusa",
     "me.him188.ani"
   ],
   "noUpdateCheck": [
     "com.example.piliplus",
+    "com.slotsun.slive",
     "com.zephyr.breeze",
     "io.legato.kazusa",
     "me.him188.ani"
   ],
   "stages": {
-    "delete_disabled_builds": 1777874152959,
-    "index.make repo": 1777874161815,
-    "prepare_apps repo": 1777874161814,
-    "process_apks": 1777874152960,
-    "read_added_date_from_all_apks": 1777874161814,
-    "remove_apks": 1777874161804,
-    "scan_repo_files": 1777874161804
+    "delete_disabled_builds": 1777921946274,
+    "index.make repo": 1777921956633,
+    "prepare_apps repo": 1777921956622,
+    "process_apks": 1777921946281,
+    "read_added_date_from_all_apks": 1777921956596,
+    "remove_apks": 1777921956583,
+    "scan_repo_files": 1777921956508
   },
-  "startTimestamp": 1777874152000,
+  "startTimestamp": 1777921945000,
   "subcommand": "update"
 }
