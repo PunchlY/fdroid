@@ -42,4 +42,10 @@ async function gh(owner: string, repo: string) {
 
 await gh("open-ani", "animeko");
 
+await gh("deretame", "Breeze");
+
+await gh("HapeLee", "legado-with-MD3");
+
+await gh("bggRGjQaUbCoE", "PiliPlus");
+
 await Bun.$`fdroid update --create-metadata --rename-apks --use-date-from-apk --pretty --delete-unknown`.cwd(process.env.FDROID_DIR);
