@@ -19,6 +19,7 @@
         packages = with pkgsFor.${system}; [
           fdroidserver
           jdk
+          jq
         ];
       };
     });

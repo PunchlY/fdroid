@@ -1,0 +1,69 @@
+name: Generate F-Droid repo
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+concurrency:
+  group: fdroid-repo
+  cancel-in-progress: true
+
+jobs:
+  apps:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure git
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Prepare worktree
+        run: |
+          git fetch origin repo || true
+
+          if git show-ref --verify --quiet refs/remotes/origin/repo; then
+            git worktree add -B repo fdroid origin/repo
+          else
+            git worktree add -B repo --orphan fdroid
+            cd fdroid
+
+            git commit --allow-empty -m "init repo branch"
+
+            cd ..
+          fi
+
+      - name: Install fdroidserver
+        run: |
+          sudo add-apt-repository ppa:fdroid/fdroidserver
+          sudo apt-get update
+          sudo apt-get install -y fdroidserver
+
+      - name: Restore secrets
+        run: |
+          echo "${{ secrets.KEYSTORE_P12 }}" | base64 -d > fdroid/keystore.p12
+          echo "${{ secrets.CONFIG_YML }}" | base64 -d > fdroid/config.yml
+
+      - name: Run update script
+        run: bash update.sh
+
+      - name: Build repo
+        run: |
+          cd fdroid
+          fdroid update -c
+
+      - name: Commit & push
+        run: |
+          cd fdroid
+
+          git add repo metadata
+          git add -u repo metadata
+
+          git commit -m "update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || echo "no changes"
+
+          git push origin repo --force-with-lease || git push origin repo --force
