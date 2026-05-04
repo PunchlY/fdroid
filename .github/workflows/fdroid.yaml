@@ -7,10 +7,6 @@ on:
   schedule:
     - cron: "0 0 * * *"
 
-concurrency:
-  group: fdroid-repo
-  cancel-in-progress: true
-
 jobs:
   apps:
     runs-on: ubuntu-latest
@@ -47,16 +43,18 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y fdroidserver
 
-      - name: Restore secrets
-        run: |
-          echo "${{ secrets.KEYSTORE_P12 }}" | base64 -d > fdroid/keystore.p12
-          echo "${{ secrets.CONFIG_YML }}" | base64 -d > fdroid/config.yml
-
       - name: Build repo
         run: |
           cd fdroid
+
+          echo "$KEYSTORE_P12" | base64 -d > keystore.p12
+          echo "$CONFIG_YML" | base64 -d > config.yml
           fdroid update -c
+
           cd ..
+        env:
+          KEYSTORE_P12: ${{ secrets.KEYSTORE_P12 }}
+          CONFIG_YML: ${{ secrets.CONFIG_YML }}
 
       - name: Commit & push
         run: |
