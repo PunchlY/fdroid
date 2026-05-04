@@ -1,0 +1,48 @@
+{
+  "/etc/issue.net": "Ubuntu 24.04.4 LTS",
+  "antiFeatures": {},
+  "apksigner": "/nix/store/0qvzpb8vf8nb5ng285snyd06wswcppqg-apksigner-35.0.6/bin/apksigner",
+  "archivePolicy0": [],
+  "commandLine": [
+    "/nix/store/mfcxqqp557llzxqlmxc93hkipcvvh0f1-fdroidserver-2.4.3/bin/fdroid update",
+    "--create-metadata",
+    "--rename-apks",
+    "--use-date-from-apk",
+    "--pretty",
+    "--delete-unknown"
+  ],
+  "disabled": [],
+  "endTimestamp": 1777874164665,
+  "failedBuilds": {},
+  "jarsigner": "/nix/store/c3pl7bqrx3d2rc3dh98z6yaj0mv1p52g-openjdk-21.0.10+7/bin/jarsigner",
+  "keytool": "/nix/store/c3pl7bqrx3d2rc3dh98z6yaj0mv1p52g-openjdk-21.0.10+7/bin/keytool",
+  "needsUpdate": [
+    "com.example.piliplus",
+    "com.zephyr.breeze",
+    "io.legato.kazusa",
+    "me.him188.ani"
+  ],
+  "noPackages": [
+    "com.example.piliplus",
+    "com.zephyr.breeze",
+    "io.legato.kazusa",
+    "me.him188.ani"
+  ],
+  "noUpdateCheck": [
+    "com.example.piliplus",
+    "com.zephyr.breeze",
+    "io.legato.kazusa",
+    "me.him188.ani"
+  ],
+  "stages": {
+    "delete_disabled_builds": 1777874152959,
+    "index.make repo": 1777874161815,
+    "prepare_apps repo": 1777874161814,
+    "process_apks": 1777874152960,
+    "read_added_date_from_all_apks": 1777874161814,
+    "remove_apks": 1777874161804,
+    "scan_repo_files": 1777874161804
+  },
+  "startTimestamp": 1777874152000,
+  "subcommand": "update"
+}
