@@ -1,8 +1,12 @@
 import { Octokit } from "octokit";
-import { mkdir } from "fs/promises";
+import { mkdir, cp } from "fs/promises";
 
 process.env.FDROID_DIR = `${__dirname}/fdroid`;
 await mkdir(`${process.env.FDROID_DIR}/repo`, { recursive: true });
+await cp(`${__dirname}/metadata`, `${process.env.FDROID_DIR}/metadata`, {
+    recursive: true,
+    force: true,
+});
 
 const octokit = new Octokit();
 
@@ -27,6 +31,12 @@ async function setReleaseUpdatedAt(name: string, updatedAt: string) {
     await releaseUpdatedAtFile.write(JSON.stringify(Object.fromEntries(releaseUpdatedAt), null, 2));
 }
 
+async function download(url: string) {
+    const name = `${Bun.randomUUIDv5(url, "url", "hex")}.apk`;
+    await Bun.$`curl -L ${url} -o ${name}`.cwd(`${process.env.FDROID_DIR}/repo`);
+    return name;
+}
+
 async function gh(owner: string, repo: string) {
     const { data: release } = await octokit.request("GET /repos/{owner}/{repo}/releases/latest", { owner, repo });
     if (!isReleaseUpToDate(`gh/${owner}/${repo}`, release.updated_at || release.published_at || release.created_at))
@@ -35,7 +45,7 @@ async function gh(owner: string, repo: string) {
         if (asset.content_type !== "application/vnd.android.package-archive")
             continue;
         console.log("download: %s", asset.browser_download_url);
-        await Bun.$`curl -L ${asset.browser_download_url} -o ${`${Bun.randomUUIDv7("hex")}.apk`}`.cwd(`${process.env.FDROID_DIR}/repo`);
+        await download(asset.browser_download_url);
     }
     await setReleaseUpdatedAt(`gh/${owner}/${repo}`, new Date().toISOString());
 }

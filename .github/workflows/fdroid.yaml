@@ -2,7 +2,7 @@ name: Generate F-Droid repo
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
@@ -33,16 +33,11 @@ jobs:
             cd ..
           fi
 
-          cd fdroid
+          echo "${{ secrets.KEYSTORE_P12 }}" | base64 -d > fdroid/keystore.p12
+          echo "${{ secrets.CONFIG_YML }}" | base64 -d > fdroid/config.yml
 
-          echo "${{ secrets.KEYSTORE_P12 }}" | base64 -d > keystore.p12
-          echo "${{ secrets.CONFIG_YML }}" | base64 -d > config.yml
+          nix develop . --command bun update.ts
 
-          cd ..
-
-      - run: nix develop . --command bun update.ts
-
-      - run: |
           cd fdroid
 
           git add releases.json
