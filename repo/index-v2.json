@@ -14,7 +14,7 @@
       }
     },
     "address": "https://MyFirstFDroidRepo.org/fdroid/repo",
-    "timestamp": 1780460373000
+    "timestamp": 1780546389000
   },
   "packages": {
     "com.example.piliplus": {
@@ -758,7 +758,7 @@
     "com.zephyr.breeze": {
       "metadata": {
         "added": 1777874149000,
-        "lastUpdated": 1780287317000,
+        "lastUpdated": 1780546349000,
         "license": "MPL-2.0",
         "sourceCode": "https://github.com/deretame/Breeze",
         "name": {
@@ -767,6 +767,83 @@
         "preferredSigner": "858f47c5f7f9a1c00a4026bab2a2f80735ca5972da9f386a618e78f9d53e1e74"
       },
       "versions": {
+        "0cddd3fb6765d5fa3e9065d85a2df9d5415e6d7576052d340cf756d319a4733c": {
+          "added": 1780546349000,
+          "file": {
+            "name": "/com.zephyr.breeze_6203.apk",
+            "sha256": "0cddd3fb6765d5fa3e9065d85a2df9d5415e6d7576052d340cf756d319a4733c",
+            "size": 25838934
+          },
+          "manifest": {
+            "nativecode": [
+              "x86_64"
+            ],
+            "versionName": "3.0.15",
+            "versionCode": 6203,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "858f47c5f7f9a1c00a4026bab2a2f80735ca5972da9f386a618e78f9d53e1e74"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_IMAGES"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_VIDEO"
+              },
+              {
+                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+              },
+              {
+                "name": "android.permission.SCHEDULE_EXACT_ALARM"
+              },
+              {
+                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "dfac0c632884c67a00698d0cd11064f7a42a9c3ac714b172abc1f5c50ea51177": {
           "added": 1780287317000,
           "file": {
@@ -1460,6 +1537,83 @@
             ]
           }
         },
+        "81c02c1576428a7bb6beab41c7232da742fc7d707c9feed33cb626d02835ff5f": {
+          "added": 1780546349000,
+          "file": {
+            "name": "/com.zephyr.breeze_4203.apk",
+            "sha256": "81c02c1576428a7bb6beab41c7232da742fc7d707c9feed33cb626d02835ff5f",
+            "size": 25052846
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a"
+            ],
+            "versionName": "3.0.15",
+            "versionCode": 4203,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "858f47c5f7f9a1c00a4026bab2a2f80735ca5972da9f386a618e78f9d53e1e74"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_IMAGES"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_VIDEO"
+              },
+              {
+                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+              },
+              {
+                "name": "android.permission.SCHEDULE_EXACT_ALARM"
+              },
+              {
+                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "9f620d580ab3cb80957c09fcc129b337b83ac3e57ece64a1388e300ca07eb875": {
           "added": 1780287316000,
           "file": {
@@ -2089,6 +2243,83 @@
             ],
             "versionName": "3.0.6",
             "versionCode": 4193,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "858f47c5f7f9a1c00a4026bab2a2f80735ca5972da9f386a618e78f9d53e1e74"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_IMAGES"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_VIDEO"
+              },
+              {
+                "name": "android.permission.REQUEST_INSTALL_PACKAGES"
+              },
+              {
+                "name": "android.permission.MANAGE_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+              },
+              {
+                "name": "android.permission.SCHEDULE_EXACT_ALARM"
+              },
+              {
+                "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "2c6a844e75b2e361551e273389bdd27b5310085ea058414cc177b89b8d606447": {
+          "added": 1780546349000,
+          "file": {
+            "name": "/com.zephyr.breeze_3203.apk",
+            "sha256": "2c6a844e75b2e361551e273389bdd27b5310085ea058414cc177b89b8d606447",
+            "size": 23724538
+          },
+          "manifest": {
+            "nativecode": [
+              "armeabi-v7a"
+            ],
+            "versionName": "3.0.15",
+            "versionCode": 3203,
             "usesSdk": {
               "minSdkVersion": 24,
               "targetSdkVersion": 36
