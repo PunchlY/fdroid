@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1781150879000,
+    "timestamp": 1781237365000,
     "version": 20002,
     "name": "apk-aggregator",
     "icon": "icon.png",
@@ -40,13 +40,13 @@
       "lastUpdated": 1779076371000
     },
     {
-      "suggestedVersionCode": "5024",
+      "suggestedVersionCode": "5046",
       "license": "GPL-3.0-only",
       "name": "PiliPlus",
       "sourceCode": "https://github.com/bggRGjQaUbCoE/PiliPlus",
       "added": 1777874151000,
       "packageName": "com.example.piliplus",
-      "lastUpdated": 1780805236000
+      "lastUpdated": 1781237315000
     },
     {
       "suggestedVersionCode": "14804",
@@ -58,17 +58,167 @@
       "lastUpdated": 1777921945000
     },
     {
-      "suggestedVersionCode": "26060823",
+      "suggestedVersionCode": "26061203",
       "license": "GPL-3.0-only",
       "name": "\u97f3\u7406\u97f3\u7406!",
       "sourceCode": "https://github.com/cwuom/NeriPlayer",
       "added": 1777923093000,
       "packageName": "moe.ouom.neriplayer",
-      "lastUpdated": 1780976394000
+      "lastUpdated": 1781237317000
     }
   ],
   "packages": {
     "com.example.piliplus": [
+      {
+        "added": 1781237315000,
+        "apkName": "com.example.piliplus_5046.apk",
+        "hash": "465c81daae0881db09b9ff8361a7e66f7bee6c159b90523a2b2160573105d692",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "armeabi-v7a"
+        ],
+        "packageName": "com.example.piliplus",
+        "sig": "1b3528be8836d28d434b1f2274bbba8e",
+        "signer": "38a7f1047f60e49d651f4d4dcc9a52a6c8bcd221a218ea1ff6d6a42c27f1c2d9",
+        "size": 23886463,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.WRITE_SETTINGS",
+            null
+          ],
+          [
+            "com.example.piliplus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 5046,
+        "versionName": "2.0.9-7e3c5c6d7"
+      },
+      {
+        "added": 1781237315000,
+        "apkName": "com.example.piliplus_5046_1b3528b.apk",
+        "hash": "ff3f418b4ef2d47071ed311995405e11e86533bf8a6836860caf8aefa18810d0",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "com.example.piliplus",
+        "sig": "1b3528be8836d28d434b1f2274bbba8e",
+        "signer": "38a7f1047f60e49d651f4d4dcc9a52a6c8bcd221a218ea1ff6d6a42c27f1c2d9",
+        "size": 23979630,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.WRITE_SETTINGS",
+            null
+          ],
+          [
+            "com.example.piliplus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 5046,
+        "versionName": "2.0.9-7e3c5c6d7"
+      },
       {
         "added": 1780805235000,
         "apkName": "com.example.piliplus_5024.apk",
@@ -4585,6 +4735,148 @@
       }
     ],
     "moe.ouom.neriplayer": [
+      {
+        "added": 1781237317000,
+        "apkName": "moe.ouom.neriplayer_26061203.apk",
+        "hash": "b3d860ae4778dcc9d16890e9a81384748c8509db5ba1c77d8863b8d92f899605",
+        "hashType": "sha256",
+        "minSdkVersion": 28,
+        "nativecode": [
+          "x86_64"
+        ],
+        "packageName": "moe.ouom.neriplayer",
+        "sig": "e348db6e968004c59855b423409b41e5",
+        "signer": "a01aedf08aca1ce6c781f49ba5301c856c021db993ab62e4e98d9f917a2e2fa6",
+        "size": 12648784,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_CONNECT",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "moe.ouom.neriplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 26061203,
+        "versionName": "4cd6de7.06121117"
+      },
+      {
+        "added": 1781237316000,
+        "apkName": "moe.ouom.neriplayer_26061203_e348db6.apk",
+        "hash": "7fe2d29210981271493a85e50ac07f7500308d23e29f59a6940eeadc9a387c34",
+        "hashType": "sha256",
+        "minSdkVersion": 28,
+        "nativecode": [
+          "armeabi-v7a"
+        ],
+        "packageName": "moe.ouom.neriplayer",
+        "sig": "e348db6e968004c59855b423409b41e5",
+        "signer": "a01aedf08aca1ce6c781f49ba5301c856c021db993ab62e4e98d9f917a2e2fa6",
+        "size": 11631886,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_CONNECT",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "moe.ouom.neriplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 26061203,
+        "versionName": "4cd6de7.06121117"
+      },
       {
         "added": 1780976394000,
         "apkName": "moe.ouom.neriplayer_26060823.apk",

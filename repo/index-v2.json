@@ -14,13 +14,13 @@
       }
     },
     "address": "https://MyFirstFDroidRepo.org/fdroid/repo",
-    "timestamp": 1781150879000
+    "timestamp": 1781237365000
   },
   "packages": {
     "com.example.piliplus": {
       "metadata": {
         "added": 1777874151000,
-        "lastUpdated": 1780805236000,
+        "lastUpdated": 1781237315000,
         "license": "GPL-3.0-only",
         "sourceCode": "https://github.com/bggRGjQaUbCoE/PiliPlus",
         "name": {
@@ -29,6 +29,146 @@
         "preferredSigner": "38a7f1047f60e49d651f4d4dcc9a52a6c8bcd221a218ea1ff6d6a42c27f1c2d9"
       },
       "versions": {
+        "465c81daae0881db09b9ff8361a7e66f7bee6c159b90523a2b2160573105d692": {
+          "added": 1781237315000,
+          "file": {
+            "name": "/com.example.piliplus_5046.apk",
+            "sha256": "465c81daae0881db09b9ff8361a7e66f7bee6c159b90523a2b2160573105d692",
+            "size": 23886463
+          },
+          "manifest": {
+            "nativecode": [
+              "armeabi-v7a"
+            ],
+            "versionName": "2.0.9-7e3c5c6d7",
+            "versionCode": 5046,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "38a7f1047f60e49d651f4d4dcc9a52a6c8bcd221a218ea1ff6d6a42c27f1c2d9"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_IMAGES"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE",
+                "maxSdkVersion": 32
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE",
+                "maxSdkVersion": 28
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_AUDIO"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_VIDEO"
+              },
+              {
+                "name": "android.permission.WRITE_SETTINGS"
+              },
+              {
+                "name": "com.example.piliplus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "ff3f418b4ef2d47071ed311995405e11e86533bf8a6836860caf8aefa18810d0": {
+          "added": 1781237315000,
+          "file": {
+            "name": "/com.example.piliplus_5046_1b3528b.apk",
+            "sha256": "ff3f418b4ef2d47071ed311995405e11e86533bf8a6836860caf8aefa18810d0",
+            "size": 23979630
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a"
+            ],
+            "versionName": "2.0.9-7e3c5c6d7",
+            "versionCode": 5046,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "38a7f1047f60e49d651f4d4dcc9a52a6c8bcd221a218ea1ff6d6a42c27f1c2d9"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_IMAGES"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE",
+                "maxSdkVersion": 32
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE",
+                "maxSdkVersion": 28
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_AUDIO"
+              },
+              {
+                "name": "android.permission.READ_MEDIA_VIDEO"
+              },
+              {
+                "name": "android.permission.WRITE_SETTINGS"
+              },
+              {
+                "name": "com.example.piliplus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "25297f5a8db5ede5567eebaa966e65cf0a041fda32d7aa1851419e9cb9bc6c26": {
           "added": 1780805235000,
           "file": {
@@ -4117,7 +4257,7 @@
     "moe.ouom.neriplayer": {
       "metadata": {
         "added": 1777923093000,
-        "lastUpdated": 1780976394000,
+        "lastUpdated": 1781237317000,
         "license": "GPL-3.0-only",
         "sourceCode": "https://github.com/cwuom/NeriPlayer",
         "name": {
@@ -4126,6 +4266,140 @@
         "preferredSigner": "a01aedf08aca1ce6c781f49ba5301c856c021db993ab62e4e98d9f917a2e2fa6"
       },
       "versions": {
+        "b3d860ae4778dcc9d16890e9a81384748c8509db5ba1c77d8863b8d92f899605": {
+          "added": 1781237317000,
+          "file": {
+            "name": "/moe.ouom.neriplayer_26061203.apk",
+            "sha256": "b3d860ae4778dcc9d16890e9a81384748c8509db5ba1c77d8863b8d92f899605",
+            "size": 12648784
+          },
+          "manifest": {
+            "nativecode": [
+              "x86_64"
+            ],
+            "versionName": "4cd6de7.06121117",
+            "versionCode": 26061203,
+            "usesSdk": {
+              "minSdkVersion": 28,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "a01aedf08aca1ce6c781f49ba5301c856c021db993ab62e4e98d9f917a2e2fa6"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.BLUETOOTH_CONNECT"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE",
+                "maxSdkVersion": 28
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE",
+                "maxSdkVersion": 32
+              },
+              {
+                "name": "android.permission.READ_MEDIA_AUDIO"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "moe.ouom.neriplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "7fe2d29210981271493a85e50ac07f7500308d23e29f59a6940eeadc9a387c34": {
+          "added": 1781237316000,
+          "file": {
+            "name": "/moe.ouom.neriplayer_26061203_e348db6.apk",
+            "sha256": "7fe2d29210981271493a85e50ac07f7500308d23e29f59a6940eeadc9a387c34",
+            "size": 11631886
+          },
+          "manifest": {
+            "nativecode": [
+              "armeabi-v7a"
+            ],
+            "versionName": "4cd6de7.06121117",
+            "versionCode": 26061203,
+            "usesSdk": {
+              "minSdkVersion": 28,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "a01aedf08aca1ce6c781f49ba5301c856c021db993ab62e4e98d9f917a2e2fa6"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.BLUETOOTH_CONNECT"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.WRITE_EXTERNAL_STORAGE",
+                "maxSdkVersion": 28
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE",
+                "maxSdkVersion": 32
+              },
+              {
+                "name": "android.permission.READ_MEDIA_AUDIO"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "moe.ouom.neriplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "d55d5800cb52caa0f27737601caea764d1f190dd0fce5cefe8568ea8da87dca8": {
           "added": 1780976394000,
           "file": {
