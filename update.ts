@@ -17,6 +17,7 @@ const releaseUpdatedAt = new Map<string, string>(
         .catch(() => ({}))
         .then(Object.entries),
 );
+let updated = false;
 
 function isReleaseUpToDate(name: string, updatedAt: string) {
     if (!releaseUpdatedAt.has(name))
@@ -27,6 +28,7 @@ function isReleaseUpToDate(name: string, updatedAt: string) {
 }
 
 async function setReleaseUpdatedAt(name: string, updatedAt: string) {
+    updated ||= releaseUpdatedAt.get(name) !== updatedAt;
     releaseUpdatedAt.set(name, updatedAt);
     await releaseUpdatedAtFile.write(JSON.stringify(Object.fromEntries(releaseUpdatedAt), null, 2));
 }
@@ -61,5 +63,8 @@ await gh("bggRGjQaUbCoE", "PiliPlus");
 await gh("SlotSun", "dart_simple_live");
 
 await gh("cwuom", "NeriPlayer");
+
+if (!updated)
+    process.exit();
 
 await Bun.$`fdroid update --create-metadata --rename-apks --use-date-from-apk --pretty --delete-unknown`.cwd(process.env.FDROID_DIR);
