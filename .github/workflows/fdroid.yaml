@@ -19,25 +19,13 @@ jobs:
       - run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-
-          git fetch origin main repo || true
-          repair_repo=false
+          
+          git fetch origin repo || true
 
           if git show-ref --verify --quiet refs/remotes/origin/repo; then
-            root=$(git rev-list --max-parents=0 origin/repo | head -n1)
-            if git merge-base --is-ancestor "$root" origin/main; then
-              echo "repo branch shares history with main, will recreate as orphan."
-              repair_repo=true
-            fi
-          fi
-
-          if [ "$repair_repo" = true ]; then
-            git worktree add --orphan fdroid
-            git archive origin/repo | tar -x -C fdroid
-          elif git show-ref --verify --quiet refs/remotes/origin/repo; then
-            git worktree add fdroid origin/repo
+            git worktree add -B repo fdroid origin/repo
           else
-            git worktree add --orphan fdroid
+            git worktree add -B repo --orphan fdroid
             git -C fdroid commit --allow-empty -m "init repo branch"
           fi
 
