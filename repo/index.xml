@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fdroid>
-	<repo icon="icon.png" name="apk-aggregator" pubkey="30820503308202eba003020102021420976bb60c034074e645e82c2d860de943745201300d06092a864886f70d01010b05003011310f300d06035504030c066664726f6964301e170d3236303530333231343633305a170d3336303433303231343633305a3011310f300d06035504030c066664726f696430820222300d06092a864886f70d01010105000382020f003082020a0282020100a79f28193804e0b04d774053d95ed91838ff5ad0a174b06a37ab05e9b94d2dca8511a7fdd87b4d66ada2233d4f6f1c482e28cb09943323c18b8b98a907a7fff56fc260b2bbde7b67c6f96fa3c3e8943aff568e5513381c1886e7d81c8029d360977bc3ea093193c840645e63232fd7b8ca2ea0deaa5f5fbe8024047fbc235989c7767f6269fe3b83eaa1f3ce38fbcd3e8fccb0191327484cdddc5dbf589bdcc66224877beeee03e71ad76fa68ef74ac9d3f5524edb6aeaebc75f761da425be8b87e791aa33ddf2100b0c384c80befd02b6065367bd4723f63b6025d52b77bedf4fda6e5be69ac5ad78ae3d10c45f1a0163d2abfd31dca574789172b11deed9efa5239a50dd1a2c45cafd4186401a291c3c00e5b02eb3a8623015627453e16ce83612c0a0ddee4d39b1098f9a09ef7ea406e675aaac72135773a3e4ddb0ceeedd9c7173c873513e76f89d4c7c0d00046595f4ae18291da8d962476c3610506c0e975c619787b2d8b440b7d38403af1d6f8e6376fe20eb0cf0a3f3c434aabbf7b9d6b8e58b124cbfb0d6397f51d7ab3a701530bd3bcd7b28f3f3c4ea315efb5287717b661f5be763a095f0a9d6caee51b79de7fa813c5c2e536f4d421f8a453fb343dbf4acd4a7e4533f2a24dabd80571be4350408720c240cfdf56ff9d3696e0d61e1c7d754ecaf77bd5729395d338fe950d63e69549b033f9b4a242844bde37d0203010001a3533051301d0603551d0e0416041436cd40ad0dcc9118d89949a0f101dd643607ba72301f0603551d2304183016801436cd40ad0dcc9118d89949a0f101dd643607ba72300f0603551d130101ff040530030101ff300d06092a864886f70d01010b05000382020100709f765c56071506b7798acf75cabc84fb9199d1aa594e5e61e7e7bd351aefcb1058d247b3c264afc921ea0f6fbf6110a06c267a31026d5c4c95a2845bcc76846c8b6f06c546e3bc2adecf0c0a8970d44de7c3263a6c9fcdd17315d8052e068d88aa5e5e1841c9e391993922b277dbc5ccc0a56f3580e1ccdb7b282fc08f0dcc455e9c81dbc4b76dd9f2fdb38e70bd6ba4231bc19914c9ad3d99352451df1a0dc7324f3df43cb469aaa21e630a13f90b64bf167b41fc034dbcad5fec263ae64bf2fda273cb0151b54fdc99253a9ea6c33ba1c63283cba188ce0fa2731417f31da28b86795fbc21828a2d6fc9db5411d704e85b5cdeb76ce8a3ff3cb58e3ecd9f9d3e6fd8c3bee0fcbf802290e996b0175cc1f4b53853f7b8f9a5423a887c74ad2da15b815e2829d12f597ecc76aa7549f1d53a10cdf90d6456f9f4785512e6debeb2c2e359e401d95b758c7dc1b0c48f533ec317814c0c22386edb814c8104583a4f89986eaeb62fc5269f0302185ec92afc7df21f62e67f0ca4209b12f2892277b789737f42207c83782b17adc3ae5e803f96acdda96e6dd52cd89a8c2beecfebaef3f06d3d896cd1429fcfa1a8fba0c0d14cb25baaf59bff61e2e8ebe0be7cccf2d65e94d1d46391fb42a49fd7a8c8da9cc6852b32912c9a7b69abe8d7ff4cc7a263b738d421c85e8fc894ae4cf952b858506ba05b8092eb614b94dd6f1377" timestamp="1783222617" url="https://MyFirstFDroidRepo.org/fdroid/repo" version="20002">
+	<repo icon="icon.png" name="apk-aggregator" pubkey="30820503308202eba003020102021420976bb60c034074e645e82c2d860de943745201300d06092a864886f70d01010b05003011310f300d06035504030c066664726f6964301e170d3236303530333231343633305a170d3336303433303231343633305a3011310f300d06035504030c066664726f696430820222300d06092a864886f70d01010105000382020f003082020a0282020100a79f28193804e0b04d774053d95ed91838ff5ad0a174b06a37ab05e9b94d2dca8511a7fdd87b4d66ada2233d4f6f1c482e28cb09943323c18b8b98a907a7fff56fc260b2bbde7b67c6f96fa3c3e8943aff568e5513381c1886e7d81c8029d360977bc3ea093193c840645e63232fd7b8ca2ea0deaa5f5fbe8024047fbc235989c7767f6269fe3b83eaa1f3ce38fbcd3e8fccb0191327484cdddc5dbf589bdcc66224877beeee03e71ad76fa68ef74ac9d3f5524edb6aeaebc75f761da425be8b87e791aa33ddf2100b0c384c80befd02b6065367bd4723f63b6025d52b77bedf4fda6e5be69ac5ad78ae3d10c45f1a0163d2abfd31dca574789172b11deed9efa5239a50dd1a2c45cafd4186401a291c3c00e5b02eb3a8623015627453e16ce83612c0a0ddee4d39b1098f9a09ef7ea406e675aaac72135773a3e4ddb0ceeedd9c7173c873513e76f89d4c7c0d00046595f4ae18291da8d962476c3610506c0e975c619787b2d8b440b7d38403af1d6f8e6376fe20eb0cf0a3f3c434aabbf7b9d6b8e58b124cbfb0d6397f51d7ab3a701530bd3bcd7b28f3f3c4ea315efb5287717b661f5be763a095f0a9d6caee51b79de7fa813c5c2e536f4d421f8a453fb343dbf4acd4a7e4533f2a24dabd80571be4350408720c240cfdf56ff9d3696e0d61e1c7d754ecaf77bd5729395d338fe950d63e69549b033f9b4a242844bde37d0203010001a3533051301d0603551d0e0416041436cd40ad0dcc9118d89949a0f101dd643607ba72301f0603551d2304183016801436cd40ad0dcc9118d89949a0f101dd643607ba72300f0603551d130101ff040530030101ff300d06092a864886f70d01010b05000382020100709f765c56071506b7798acf75cabc84fb9199d1aa594e5e61e7e7bd351aefcb1058d247b3c264afc921ea0f6fbf6110a06c267a31026d5c4c95a2845bcc76846c8b6f06c546e3bc2adecf0c0a8970d44de7c3263a6c9fcdd17315d8052e068d88aa5e5e1841c9e391993922b277dbc5ccc0a56f3580e1ccdb7b282fc08f0dcc455e9c81dbc4b76dd9f2fdb38e70bd6ba4231bc19914c9ad3d99352451df1a0dc7324f3df43cb469aaa21e630a13f90b64bf167b41fc034dbcad5fec263ae64bf2fda273cb0151b54fdc99253a9ea6c33ba1c63283cba188ce0fa2731417f31da28b86795fbc21828a2d6fc9db5411d704e85b5cdeb76ce8a3ff3cb58e3ecd9f9d3e6fd8c3bee0fcbf802290e996b0175cc1f4b53853f7b8f9a5423a887c74ad2da15b815e2829d12f597ecc76aa7549f1d53a10cdf90d6456f9f4785512e6debeb2c2e359e401d95b758c7dc1b0c48f533ec317814c0c22386edb814c8104583a4f89986eaeb62fc5269f0302185ec92afc7df21f62e67f0ca4209b12f2892277b789737f42207c83782b17adc3ae5e803f96acdda96e6dd52cd89a8c2beecfebaef3f06d3d896cd1429fcfa1a8fba0c0d14cb25baaf59bff61e2e8ebe0be7cccf2d65e94d1d46391fb42a49fd7a8c8da9cc6852b32912c9a7b69abe8d7ff4cc7a263b738d421c85e8fc894ae4cf952b858506ba05b8092eb614b94dd6f1377" timestamp="1783309457" url="https://MyFirstFDroidRepo.org/fdroid/repo" version="20002">
 		<description>This is a repository of apps to be used with F-Droid. Applications in this repository are either official binaries built by the original application developers, or are binaries built from source by the admin of f-droid.org using the tools on https://gitlab.com/fdroid.</description>
 	</repo>
 	<application id="me.him188.ani">
@@ -33,7 +33,7 @@
 	<application id="com.zephyr.breeze">
 		<id>com.zephyr.breeze</id>
 		<added>2026-05-04</added>
-		<lastupdated>2026-06-29</lastupdated>
+		<lastupdated>2026-07-06</lastupdated>
 		<name>Breeze</name>
 		<summary></summary>
 		<desc>No description available</desc>
@@ -42,7 +42,20 @@
 		<source>https://github.com/deretame/Breeze</source>
 		<tracker></tracker>
 		<marketversion></marketversion>
-		<marketvercode>6207</marketvercode>
+		<marketvercode>6208</marketvercode>
+		<package>
+			<version>3.0.20</version>
+			<versioncode>6208</versioncode>
+			<apkname>com.zephyr.breeze_6208.apk</apkname>
+			<hash type="sha256">d12d04ab96c128b6500e1ce4a389e6a3c9ffa1413a303ca555e8bf395ca2af4d</hash>
+			<size>26014778</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-07-06</added>
+			<sig>c10e572a512904383ba26a5c49d8ddb3</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,INTERNET,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SCHEDULE_EXACT_ALARM,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>x86_64</nativecode>
+		</package>
 		<package>
 			<version>3.0.19</version>
 			<versioncode>6207</versioncode>
@@ -226,6 +239,19 @@
 			<nativecode>x86_64</nativecode>
 		</package>
 		<package>
+			<version>3.0.20</version>
+			<versioncode>4208</versioncode>
+			<apkname>com.zephyr.breeze_4208.apk</apkname>
+			<hash type="sha256">b92c68ba01936c0cde72dfc672a78297447a777fb1a2be2fe8762961ad35c427</hash>
+			<size>30526571</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-07-06</added>
+			<sig>c10e572a512904383ba26a5c49d8ddb3</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,INTERNET,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SCHEDULE_EXACT_ALARM,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+		<package>
 			<version>3.0.19</version>
 			<versioncode>4207</versioncode>
 			<apkname>com.zephyr.breeze_4207.apk</apkname>
@@ -406,6 +432,19 @@
 			<sig>c10e572a512904383ba26a5c49d8ddb3</sig>
 			<permissions>ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,INTERNET,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SCHEDULE_EXACT_ALARM,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
 			<nativecode>arm64-v8a</nativecode>
+		</package>
+		<package>
+			<version>3.0.20</version>
+			<versioncode>3208</versioncode>
+			<apkname>com.zephyr.breeze_3208.apk</apkname>
+			<hash type="sha256">77077c3c4999c733d32c1a4d2782d7de6e640b62feabaad8824f728d72fe2964</hash>
+			<size>24094398</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-07-06</added>
+			<sig>c10e572a512904383ba26a5c49d8ddb3</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,INTERNET,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SCHEDULE_EXACT_ALARM,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>armeabi-v7a</nativecode>
 		</package>
 		<package>
 			<version>3.0.19</version>
@@ -848,7 +887,7 @@
 	<application id="moe.ouom.neriplayer">
 		<id>moe.ouom.neriplayer</id>
 		<added>2026-05-04</added>
-		<lastupdated>2026-07-05</lastupdated>
+		<lastupdated>2026-07-06</lastupdated>
 		<name>音理音理!</name>
 		<summary></summary>
 		<desc>No description available</desc>
@@ -857,7 +896,22 @@
 		<source>https://github.com/cwuom/NeriPlayer</source>
 		<tracker></tracker>
 		<marketversion></marketversion>
-		<marketvercode>26070501</marketvercode>
+		<marketvercode>26070513</marketvercode>
+		<package>
+			<version>8f5eae6.07052137</version>
+			<versioncode>26070513</versioncode>
+			<apkname>moe.ouom.neriplayer_26070513.apk</apkname>
+			<hash type="sha256">8a93d6a3a88e2fb050545fd538b62761be7c28ba8aac01c18ceb2bd598d51cd0</hash>
+			<size>12745431</size>
+			<sdkver>28</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-07-06</added>
+			<sig>e348db6e968004c59855b423409b41e5</sig>
+			<permissions>ACCESS_NETWORK_STATE,BLUETOOTH_CONNECT,FOREGROUND_SERVICE,FOREGROUND_SERVICE_MEDIA_PLAYBACK,INTERNET,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_AUDIO,RECEIVE_BOOT_COMPLETED,SYSTEM_ALERT_WINDOW,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,moe.ouom.neriplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="28" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>x86</nativecode>
+		</package>
 		<package>
 			<version>52f7746.07050944</version>
 			<versioncode>26070501</versioncode>
