@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1783395366000,
+    "timestamp": 1783567731000,
     "version": 20002,
     "name": "apk-aggregator",
     "icon": "icon.png",
@@ -58,13 +58,13 @@
       "lastUpdated": 1777921945000
     },
     {
-      "suggestedVersionCode": "26070623",
+      "suggestedVersionCode": "26070822",
       "license": "GPL-3.0-only",
       "name": "\u97f3\u7406\u97f3\u7406!",
       "sourceCode": "https://github.com/cwuom/NeriPlayer",
       "added": 1777923093000,
       "packageName": "moe.ouom.neriplayer",
-      "lastUpdated": 1783395297000
+      "lastUpdated": 1783567670000
     }
   ],
   "packages": {
@@ -6649,6 +6649,156 @@
       }
     ],
     "moe.ouom.neriplayer": [
+      {
+        "added": 1783567670000,
+        "apkName": "moe.ouom.neriplayer_26070822.apk",
+        "hash": "28ab1384d1fa1e79f82df1e4bf918fca0c22178e0fb814b34d33a42ce18e8c40",
+        "hashType": "sha256",
+        "minSdkVersion": 28,
+        "nativecode": [
+          "x86_64"
+        ],
+        "packageName": "moe.ouom.neriplayer",
+        "sig": "e348db6e968004c59855b423409b41e5",
+        "signer": "a01aedf08aca1ce6c781f49ba5301c856c021db993ab62e4e98d9f917a2e2fa6",
+        "size": 13383978,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_CONNECT",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "moe.ouom.neriplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 26070822,
+        "versionName": "41ae50a.07090657"
+      },
+      {
+        "added": 1783567669000,
+        "apkName": "moe.ouom.neriplayer_26070822_e348db6.apk",
+        "hash": "faf0009e54c8e399ced77efb8fc1f0c1795242df89c72c3a4fb67750970ea4cb",
+        "hashType": "sha256",
+        "minSdkVersion": 28,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "moe.ouom.neriplayer",
+        "sig": "e348db6e968004c59855b423409b41e5",
+        "signer": "a01aedf08aca1ce6c781f49ba5301c856c021db993ab62e4e98d9f917a2e2fa6",
+        "size": 13345252,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_CONNECT",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "moe.ouom.neriplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 26070822,
+        "versionName": "41ae50a.07090657"
+      },
       {
         "added": 1783395296000,
         "apkName": "moe.ouom.neriplayer_26070623.apk",
