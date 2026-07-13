@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1783654320000,
+    "timestamp": 1783911522000,
     "version": 20002,
     "name": "apk-aggregator",
     "icon": "icon.png",
@@ -22,13 +22,13 @@
       "lastUpdated": 1777874148000
     },
     {
-      "suggestedVersionCode": "6208",
+      "suggestedVersionCode": "6209",
       "license": "MPL-2.0",
       "name": "Breeze",
       "sourceCode": "https://github.com/deretame/Breeze",
       "added": 1777874149000,
       "packageName": "com.zephyr.breeze",
-      "lastUpdated": 1783309386000
+      "lastUpdated": 1783911440000
     },
     {
       "suggestedVersionCode": "17351",
@@ -40,13 +40,13 @@
       "lastUpdated": 1779076371000
     },
     {
-      "suggestedVersionCode": "5051",
+      "suggestedVersionCode": "5109",
       "license": "GPL-3.0-only",
       "name": "PiliPlus",
       "sourceCode": "https://github.com/bggRGjQaUbCoE/PiliPlus",
       "added": 1777874151000,
       "packageName": "com.example.piliplus",
-      "lastUpdated": 1781368865000
+      "lastUpdated": 1783911442000
     },
     {
       "suggestedVersionCode": "14804",
@@ -58,17 +58,167 @@
       "lastUpdated": 1777921945000
     },
     {
-      "suggestedVersionCode": "26070914",
+      "suggestedVersionCode": "26071219",
       "license": "GPL-3.0-only",
       "name": "\u97f3\u7406\u97f3\u7406!",
       "sourceCode": "https://github.com/cwuom/NeriPlayer",
       "added": 1777923093000,
       "packageName": "moe.ouom.neriplayer",
-      "lastUpdated": 1783654247000
+      "lastUpdated": 1783911443000
     }
   ],
   "packages": {
     "com.example.piliplus": [
+      {
+        "added": 1783911441000,
+        "apkName": "com.example.piliplus_5109.apk",
+        "hash": "16effc7af3188b3f01be6227071ff1a6ec24311827b374267c003176ed5682f7",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "com.example.piliplus",
+        "sig": "1b3528be8836d28d434b1f2274bbba8e",
+        "signer": "38a7f1047f60e49d651f4d4dcc9a52a6c8bcd221a218ea1ff6d6a42c27f1c2d9",
+        "size": 24019795,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.WRITE_SETTINGS",
+            null
+          ],
+          [
+            "com.example.piliplus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 5109,
+        "versionName": "2.1.0-c1aeaca09"
+      },
+      {
+        "added": 1783911442000,
+        "apkName": "com.example.piliplus_5109_1b3528b.apk",
+        "hash": "4d785bda0490265463b49175ad667a237d35b7f3e354f503e65052c22ed2e8ae",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "armeabi-v7a"
+        ],
+        "packageName": "com.example.piliplus",
+        "sig": "1b3528be8836d28d434b1f2274bbba8e",
+        "signer": "38a7f1047f60e49d651f4d4dcc9a52a6c8bcd221a218ea1ff6d6a42c27f1c2d9",
+        "size": 23934389,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.WRITE_SETTINGS",
+            null
+          ],
+          [
+            "com.example.piliplus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 5109,
+        "versionName": "2.1.0-c1aeaca09"
+      },
       {
         "added": 1781368865000,
         "apkName": "com.example.piliplus_5051.apk",
@@ -1577,6 +1727,97 @@
     ],
     "com.zephyr.breeze": [
       {
+        "added": 1783911440000,
+        "apkName": "com.zephyr.breeze_6209.apk",
+        "hash": "e8282cc8df28f9d7e1f59bc8371303749695f5b4de3c2dcbc17931e957bc24f0",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "x86_64"
+        ],
+        "packageName": "com.zephyr.breeze",
+        "sig": "c10e572a512904383ba26a5c49d8ddb3",
+        "signer": "858f47c5f7f9a1c00a4026bab2a2f80735ca5972da9f386a618e78f9d53e1e74",
+        "size": 26372206,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.MANAGE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.SCHEDULE_EXACT_ALARM",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 6209,
+        "versionName": "3.0.21"
+      },
+      {
         "added": 1783309386000,
         "apkName": "com.zephyr.breeze_6208.apk",
         "hash": "d12d04ab96c128b6500e1ce4a389e6a3c9ffa1413a303ca555e8bf395ca2af4d",
@@ -2985,6 +3226,97 @@
         "versionName": "3.0.6"
       },
       {
+        "added": 1783911439000,
+        "apkName": "com.zephyr.breeze_4209.apk",
+        "hash": "7f1737435c2886beb96ca695245075c1dffaac7a8883e92876e0c244e66303bc",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "com.zephyr.breeze",
+        "sig": "c10e572a512904383ba26a5c49d8ddb3",
+        "signer": "858f47c5f7f9a1c00a4026bab2a2f80735ca5972da9f386a618e78f9d53e1e74",
+        "size": 30854991,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.MANAGE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.SCHEDULE_EXACT_ALARM",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 4209,
+        "versionName": "3.0.21"
+      },
+      {
         "added": 1783309384000,
         "apkName": "com.zephyr.breeze_4208.apk",
         "hash": "b92c68ba01936c0cde72dfc672a78297447a777fb1a2be2fe8762961ad35c427",
@@ -4391,6 +4723,97 @@
         ],
         "versionCode": 4193,
         "versionName": "3.0.6"
+      },
+      {
+        "added": 1783911440000,
+        "apkName": "com.zephyr.breeze_3209.apk",
+        "hash": "9b3b7fe2a0935f9db47cd8a086b2f5875cdebdc2a875b4b8e325575cd0bb4ba6",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "armeabi-v7a"
+        ],
+        "packageName": "com.zephyr.breeze",
+        "sig": "c10e572a512904383ba26a5c49d8ddb3",
+        "signer": "858f47c5f7f9a1c00a4026bab2a2f80735ca5972da9f386a618e78f9d53e1e74",
+        "size": 24411582,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.MANAGE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.SCHEDULE_EXACT_ALARM",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 3209,
+        "versionName": "3.0.21"
       },
       {
         "added": 1783309385000,
@@ -6649,6 +7072,172 @@
       }
     ],
     "moe.ouom.neriplayer": [
+      {
+        "added": 1783911443000,
+        "apkName": "moe.ouom.neriplayer_26071219.apk",
+        "hash": "2df035dd3db08a5d6b266b92a2386c53930eb25374d11e4ca47ca3cca685e15f",
+        "hashType": "sha256",
+        "minSdkVersion": 28,
+        "nativecode": [
+          "armeabi-v7a"
+        ],
+        "packageName": "moe.ouom.neriplayer",
+        "sig": "e348db6e968004c59855b423409b41e5",
+        "signer": "a01aedf08aca1ce6c781f49ba5301c856c021db993ab62e4e98d9f917a2e2fa6",
+        "size": 11350885,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_CONNECT",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "moe.ouom.neriplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 26071219,
+        "versionName": "19954576.07130356"
+      },
+      {
+        "added": 1783911443000,
+        "apkName": "moe.ouom.neriplayer_26071219_e348db6.apk",
+        "hash": "14b46a2f832f2468f28ce71d7acd6cc8bcc9a84c0b4b1944b9c5e1e40c222846",
+        "hashType": "sha256",
+        "minSdkVersion": 28,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "moe.ouom.neriplayer",
+        "sig": "e348db6e968004c59855b423409b41e5",
+        "signer": "a01aedf08aca1ce6c781f49ba5301c856c021db993ab62e4e98d9f917a2e2fa6",
+        "size": 11531005,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.SYSTEM_ALERT_WINDOW",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_CONNECT",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "moe.ouom.neriplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 26071219,
+        "versionName": "19954576.07130356"
+      },
       {
         "added": 1783654247000,
         "apkName": "moe.ouom.neriplayer_26070914.apk",
