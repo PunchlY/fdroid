@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1784256557000,
+    "timestamp": 1784429527000,
     "version": 20002,
     "name": "apk-aggregator",
     "icon": "icon.png",
@@ -31,13 +31,13 @@
       "lastUpdated": 1783911440000
     },
     {
-      "suggestedVersionCode": "17894",
+      "suggestedVersionCode": "17895",
       "license": "GPL-3.0-only",
       "name": "Legado",
       "sourceCode": "https://github.com/HapeLee/legado-with-MD3",
       "added": 1777874150000,
       "packageName": "io.legato.kazusa",
-      "lastUpdated": 1784256478000
+      "lastUpdated": 1784429432000
     },
     {
       "suggestedVersionCode": "5109",
@@ -6225,6 +6225,236 @@
       }
     ],
     "io.legato.kazusa": [
+      {
+        "added": 1784429432000,
+        "apkName": "io.legato.kazusa_17895.apk",
+        "hash": "9f78649c1558c8bfe320bdf45f148f5409d2218b27e828b6279f5e45fd1b08f3",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "armeabi-v7a"
+        ],
+        "packageName": "io.legato.kazusa",
+        "sig": "77f71b462f07df244e7ff0682fac5021",
+        "signer": "ddc9ebf7c8a739e8ebb21903ee4363bc94eba114af33b05068431f9c04dcbb96",
+        "size": 17838907,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.MANAGE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.FLASHLIGHT",
+            null
+          ],
+          [
+            "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+            null
+          ],
+          [
+            "com.google.android.gms.permission.AD_ID",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_AD_ID",
+            null
+          ],
+          [
+            "io.legato.kazusa.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 17895,
+        "versionName": "3.26.15"
+      },
+      {
+        "added": 1784429431000,
+        "apkName": "io.legato.kazusa_17895_77f71b4.apk",
+        "hash": "38cc182227eca1b0509eee7c75f3be00338655ea751d04698d1881acdc7cf86b",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "io.legato.kazusa",
+        "sig": "77f71b462f07df244e7ff0682fac5021",
+        "signer": "ddc9ebf7c8a739e8ebb21903ee4363bc94eba114af33b05068431f9c04dcbb96",
+        "size": 18299074,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ],
+          [
+            "android.permission.MANAGE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.FLASHLIGHT",
+            null
+          ],
+          [
+            "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+            null
+          ],
+          [
+            "com.google.android.gms.permission.AD_ID",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_AD_ID",
+            null
+          ],
+          [
+            "io.legato.kazusa.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 17895,
+        "versionName": "3.26.15"
+      },
       {
         "added": 1784256477000,
         "apkName": "io.legato.kazusa_17894.apk",
