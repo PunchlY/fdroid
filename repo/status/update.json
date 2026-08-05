@@ -12,7 +12,7 @@
     "--delete-unknown"
   ],
   "disabled": [],
-  "endTimestamp": 1785811267518,
+  "endTimestamp": 1785897608208,
   "failedBuilds": {},
   "jarsigner": "/nix/store/c3pl7bqrx3d2rc3dh98z6yaj0mv1p52g-openjdk-21.0.10+7/bin/jarsigner",
   "keytool": "/nix/store/c3pl7bqrx3d2rc3dh98z6yaj0mv1p52g-openjdk-21.0.10+7/bin/keytool",
@@ -41,14 +41,14 @@
     "moe.ouom.neriplayer"
   ],
   "stages": {
-    "delete_disabled_builds": 1785811161199,
-    "index.make repo": 1785811264293,
-    "prepare_apps repo": 1785811264291,
-    "process_apks": 1785811161199,
-    "read_added_date_from_all_apks": 1785811264291,
-    "remove_apks": 1785811264280,
-    "scan_repo_files": 1785811264279
+    "delete_disabled_builds": 1785897505248,
+    "index.make repo": 1785897604888,
+    "prepare_apps repo": 1785897604886,
+    "process_apks": 1785897505248,
+    "read_added_date_from_all_apks": 1785897604886,
+    "remove_apks": 1785897604876,
+    "scan_repo_files": 1785897604875
   },
-  "startTimestamp": 1785811161000,
+  "startTimestamp": 1785897505000,
   "subcommand": "update"
 }
