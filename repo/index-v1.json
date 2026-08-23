@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1787275578000,
+    "timestamp": 1787448414000,
     "version": 20002,
     "name": "apk-aggregator",
     "icon": "icon.png",
@@ -40,13 +40,13 @@
       "lastUpdated": 1784429432000
     },
     {
-      "suggestedVersionCode": "5109",
+      "suggestedVersionCode": "5231",
       "license": "GPL-3.0-only",
       "name": "PiliPlus",
       "sourceCode": "https://github.com/bggRGjQaUbCoE/PiliPlus",
       "added": 1777874151000,
       "packageName": "com.example.piliplus",
-      "lastUpdated": 1783911442000
+      "lastUpdated": 1787448326000
     },
     {
       "suggestedVersionCode": "14804",
@@ -69,6 +69,156 @@
   ],
   "packages": {
     "com.example.piliplus": [
+      {
+        "added": 1787448326000,
+        "apkName": "com.example.piliplus_5231.apk",
+        "hash": "92016f9daa9f3f04c2d1fd62c870e9242fb3dc4c1b603f8b6b61b32f62919dbc",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "x86_64"
+        ],
+        "packageName": "com.example.piliplus",
+        "sig": "1b3528be8836d28d434b1f2274bbba8e",
+        "signer": "38a7f1047f60e49d651f4d4dcc9a52a6c8bcd221a218ea1ff6d6a42c27f1c2d9",
+        "size": 24994562,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.WRITE_SETTINGS",
+            null
+          ],
+          [
+            "com.example.piliplus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 5231,
+        "versionName": "2.1.1-edd60d635"
+      },
+      {
+        "added": 1787448326000,
+        "apkName": "com.example.piliplus_5231_1b3528b.apk",
+        "hash": "f4cdf96e820f89af9ea38bafd7e46e5842db2c9017b40cc5e4dc74ef5c054d56",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "armeabi-v7a"
+        ],
+        "packageName": "com.example.piliplus",
+        "sig": "1b3528be8836d28d434b1f2274bbba8e",
+        "signer": "38a7f1047f60e49d651f4d4dcc9a52a6c8bcd221a218ea1ff6d6a42c27f1c2d9",
+        "size": 23955599,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_IMAGES",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            32
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            28
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_AUDIO",
+            null
+          ],
+          [
+            "android.permission.READ_MEDIA_VIDEO",
+            null
+          ],
+          [
+            "android.permission.WRITE_SETTINGS",
+            null
+          ],
+          [
+            "com.example.piliplus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 5231,
+        "versionName": "2.1.1-edd60d635"
+      },
       {
         "added": 1783911441000,
         "apkName": "com.example.piliplus_5109.apk",
