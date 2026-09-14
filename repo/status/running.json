@@ -1,5 +1,5 @@
 {
-  "/etc/issue.net": "Ubuntu 24.04.4 LTS",
+  "/etc/issue.net": "Ubuntu 24.04.5 LTS",
   "antiFeatures": {},
   "apksigner": "/nix/store/0qvzpb8vf8nb5ng285snyd06wswcppqg-apksigner-35.0.6/bin/apksigner",
   "archivePolicy0": [],
@@ -12,7 +12,7 @@
     "--delete-unknown"
   ],
   "disabled": [],
-  "endTimestamp": 1788751586736,
+  "endTimestamp": 1789358025524,
   "failedBuilds": {},
   "jarsigner": "/nix/store/c3pl7bqrx3d2rc3dh98z6yaj0mv1p52g-openjdk-21.0.10+7/bin/jarsigner",
   "keytool": "/nix/store/c3pl7bqrx3d2rc3dh98z6yaj0mv1p52g-openjdk-21.0.10+7/bin/keytool",
@@ -41,14 +41,14 @@
     "moe.ouom.neriplayer"
   ],
   "stages": {
-    "delete_disabled_builds": 1788751455127,
-    "index.make repo": 1788751583496,
-    "prepare_apps repo": 1788751583494,
-    "process_apks": 1788751455127,
-    "read_added_date_from_all_apks": 1788751583494,
-    "remove_apks": 1788751583481,
-    "scan_repo_files": 1788751583479
+    "delete_disabled_builds": 1789357892206,
+    "index.make repo": 1789358022388,
+    "prepare_apps repo": 1789358022386,
+    "process_apks": 1789357892206,
+    "read_added_date_from_all_apks": 1789358022386,
+    "remove_apks": 1789358022373,
+    "scan_repo_files": 1789358022372
   },
-  "startTimestamp": 1788751454000,
+  "startTimestamp": 1789357892000,
   "subcommand": "update"
 }
