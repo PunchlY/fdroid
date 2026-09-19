@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1789702959000,
+    "timestamp": 1789789248000,
     "version": 20002,
     "name": "apk-aggregator",
     "icon": "icon.png",
@@ -49,13 +49,13 @@
       "lastUpdated": 1789357891000
     },
     {
-      "suggestedVersionCode": "14811",
+      "suggestedVersionCode": "14812",
       "license": "GPL-3.0-only",
       "name": "Slive",
       "sourceCode": "https://github.com/SlotSun/dart_simple_live",
       "added": 1777921943000,
       "packageName": "com.slotsun.slive",
-      "lastUpdated": 1789702856000
+      "lastUpdated": 1789789111000
     },
     {
       "suggestedVersionCode": "26090302",
@@ -2622,6 +2622,77 @@
     ],
     "com.slotsun.slive": [
       {
+        "added": 1789789111000,
+        "apkName": "com.slotsun.slive_14812.apk",
+        "hash": "39820dc852e40b7cab0f6d673642105ba9ebca16ed8b8aa00c454455c84aa075",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "x86_64"
+        ],
+        "packageName": "com.slotsun.slive",
+        "sig": "65bd5e1a3b1ae4a262f385ab94f691cc",
+        "signer": "680b0d6171888e9363e2952af2c1d507e69a9482ba919d3c851f3819781e2de3",
+        "size": 25838091,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.MANAGE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "com.google.android.gms.permission.AD_ID",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_AD_ID",
+            null
+          ],
+          [
+            "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+            null
+          ],
+          [
+            "com.slotsun.slive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ]
+        ],
+        "versionCode": 14812,
+        "versionName": "1.8.12"
+      },
+      {
         "added": 1789702856000,
         "apkName": "com.slotsun.slive_14811.apk",
         "hash": "b9ff9f70dd6ec777563a915b4bb2ed203070d9439dfe86c5e4725ea83673f191",
@@ -2744,6 +2815,77 @@
         "versionName": "1.8.4"
       },
       {
+        "added": 1789789110000,
+        "apkName": "com.slotsun.slive_12812.apk",
+        "hash": "e919446f4cf829c08543d270e917a493bc23d9ee70d09a2c0c1d6f36b2ec93e8",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "com.slotsun.slive",
+        "sig": "65bd5e1a3b1ae4a262f385ab94f691cc",
+        "signer": "680b0d6171888e9363e2952af2c1d507e69a9482ba919d3c851f3819781e2de3",
+        "size": 24718292,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.MANAGE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "com.google.android.gms.permission.AD_ID",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_AD_ID",
+            null
+          ],
+          [
+            "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+            null
+          ],
+          [
+            "com.slotsun.slive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ]
+        ],
+        "versionCode": 12812,
+        "versionName": "1.8.12"
+      },
+      {
         "added": 1789702855000,
         "apkName": "com.slotsun.slive_12811.apk",
         "hash": "48f7a753a5222734cdcc372ddfa4a4a1aa32b19867712fe985cf730ca1d78a9e",
@@ -2864,6 +3006,77 @@
         ],
         "versionCode": 12804,
         "versionName": "1.8.4"
+      },
+      {
+        "added": 1789789111000,
+        "apkName": "com.slotsun.slive_11812.apk",
+        "hash": "f800175dd3f71b9e9b62f5be510c8943db4742fb21f74199966fad214a8c391c",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "armeabi-v7a"
+        ],
+        "packageName": "com.slotsun.slive",
+        "sig": "65bd5e1a3b1ae4a262f385ab94f691cc",
+        "signer": "680b0d6171888e9363e2952af2c1d507e69a9482ba919d3c851f3819781e2de3",
+        "size": 23521446,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.MANAGE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "com.google.android.gms.permission.AD_ID",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_ADSERVICES_AD_ID",
+            null
+          ],
+          [
+            "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+            null
+          ],
+          [
+            "com.slotsun.slive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ]
+        ],
+        "versionCode": 11812,
+        "versionName": "1.8.12"
       },
       {
         "added": 1789702855000,
