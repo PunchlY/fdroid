@@ -54,19 +54,19 @@ async function gh(
 }
 
 await Promise.allSettled([
-  gh("open-ani", "animeko"),
+  gh("open-ani", "animeko", false, /(?<!universal)\.apk$/),
   gh("deretame", "Breeze"),
   gh("HapeLee", "legado-with-MD3"),
   gh("bggRGjQaUbCoE", "PiliPlus"),
   gh("SlotSun", "dart_simple_live"),
   gh("cwuom", "NeriPlayer"),
   gh("zzc10086", "TiebaLite", true),
-  gh("NihilDigit", "bilby"),
-  gh("Nekogram", "Nekogram"),
-  gh("Miuzarte", "ScrcpyForAndroid"),
+  gh("NihilDigit", "bilby", false, /(?<!universal)\.apk$/),
+  gh("Nekogram", "Nekogram", false, /(?<!universal)\.apk$/),
+  gh("Miuzarte", "ScrcpyForAndroid", false, /(?<!universal)-release\.apk$/),
   gh("Bumblebee202111", "doubean-public"),
   gh("zly2006", "zhihu-plus-plus", false, /^zhihu\+\+-lite\.apk$/),
-  // gh("liuchuancong", "pure_live"),
+  gh("liuchuancong", "pure_live"),
 ]);
 
 const downloader = await downloadSequence(
