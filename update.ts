@@ -77,7 +77,6 @@ for await (const path of new Bun.Glob("fdroid/repo/*.apk").scan()) {
 const downloader = await downloadSequence(
   {
     cliProgress: true,
-    parallelDownloads: 10,
   },
   ...downloads,
 );
