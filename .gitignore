@@ -1,10 +1,5 @@
 node_modules
 
-/metadata
-/repo
-/tmp
-/srclibs
-/keystore.p12
-/config.yml
+/fdroid
 
 .env

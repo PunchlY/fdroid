@@ -33,12 +33,12 @@ async function gh(owner: string, repo: string, preRelease = false) {
     }
     const url = asset.browser_download_url;
     const fileName = `${Bun.randomUUIDv5(url, "url", "hex")}.apk`;
-    redirects.set(`/${fileName}`, url);
+    redirects.set(`/repo/${fileName}`, url);
     downloads.add(
       await downloadFile({
         url,
         fileName,
-        directory: "repo",
+        directory: "fdroid/repo",
         skipExisting: true,
       }),
     );
@@ -77,38 +77,13 @@ Bun.spawnSync([
   "--create-metadata",
   "--use-date-from-apk",
   "--pretty",
-], { stdout: "inherit", stderr: "inherit" });
+], {
+  cwd: "fdroid",
+  stdout: "inherit",
+  stderr: "inherit",
+});
 
-// const { default: { packages } } = await import("./repo/index-v2.json");
-
-// for (const { versions } of Object.values(packages)) {
-//   const latestVersionCode = Math.max(
-//     ...Object.values(versions)
-//       .map((v) => v.manifest.versionCode),
-//   );
-//   for (
-//     const {
-//       file: { name },
-//       manifest: { versionCode },
-//     } of Object.values(versions)
-//   ) {
-//     if (versionCode === latestVersionCode) {
-//       continue;
-//     }
-
-//     await rm(join("repo", name));
-//   }
-// }
-
-// Bun.spawnSync([
-//   "fdroid",
-//   "update",
-//   "--delete-unknown",
-//   "--use-date-from-apk",
-//   "--pretty",
-// ], { stdout: "inherit", stderr: "inherit" });
-
-const redirectsFile = Bun.file("repo/_redirects").writer();
+const redirectsFile = Bun.file("fdroid/_redirects").writer();
 for (const [name, url] of redirects) {
   await redirectsFile.write(`${name} ${url}\n`);
 }
