@@ -2,6 +2,7 @@ import { Octokit } from "octokit";
 import type { DownloadEngineNodejs } from "ipull";
 import { downloadFile, downloadSequence } from "ipull";
 import { utimes } from "node:fs/promises";
+import { rm } from "node:fs/promises";
 
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
@@ -82,6 +83,8 @@ const downloader = await downloadSequence(
 );
 
 await downloader.download();
+
+await rm("fdroid/repo/icons/icon.png");
 
 Bun.spawnSync([
   "fdroid",
