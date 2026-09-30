@@ -32,8 +32,8 @@ jobs:
             mkdir fdroid
           fi
 
-          echo "${{ secrets.KEYSTORE_P12 }}" | base64 -d > keystore.p12
-          echo "${{ secrets.CONFIG_YML }}" | base64 -d > config.yml
+          echo "${{ secrets.KEYSTORE_P12 }}" | base64 -d > fdroid/keystore.p12
+          echo "${{ secrets.CONFIG_YML }}" | base64 -d > fdroid/config.yml
 
           nix develop . --command bun update.ts
 
@@ -43,7 +43,8 @@ jobs:
           git -C fdroid config user.name github-actions[bot]
           git -C fdroid config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-          git -C fdroid add -A repo tmp/apkcache.json
+          git -C fdroid add -A repo tmp/apkcache.json _redirects
+          git -C fdroid rm --cached 'repo/*.apk'
           git -C fdroid commit -m "update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
           git -C fdroid branch -M repo
