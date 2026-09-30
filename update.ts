@@ -57,7 +57,7 @@ async function gh(
 await Promise.allSettled([
   gh("open-ani", "animeko", false, /(?<!universal)\.apk$/),
   gh("deretame", "Breeze"),
-  gh("HapeLee", "legado-with-MD3"),
+  gh("HapeLee", "legado-with-MD3", true),
   gh("bggRGjQaUbCoE", "PiliPlus"),
   gh("SlotSun", "dart_simple_live"),
   gh("cwuom", "NeriPlayer"),
