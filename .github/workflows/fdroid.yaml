@@ -1,0 +1,54 @@
+name: Generate F-Droid repo
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  apps:
+    name: "Generate repo from apps listing"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: cachix/install-nix-action@v31
+
+      - run: |
+          git config --global credential.helper store
+          echo "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com" > ~/.git-credentials
+
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+          git fetch origin repo || true
+
+          if git show-ref --verify --quiet refs/remotes/origin/repo; then
+            git clone --depth 1 --branch repo "$(git remote get-url origin)" repo
+          else
+            mkdir repo
+          fi
+
+          echo "${{ secrets.KEYSTORE_P12 }}" | base64 -d > keystore.p12
+          echo "${{ secrets.CONFIG_YML }}" | base64 -d > config.yml
+
+          nix develop . --command bun update.ts
+
+          rm -rf repo/.git
+
+          git -C repo init
+          git -C repo config user.name github-actions[bot]
+          git -C repo config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+          git -C repo add -A
+          git -C repo rm --cached '*.apk'
+          git -C repo commit -m "update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
+          git -C repo branch -M repo
+          git -C repo remote add origin "$(git remote get-url origin)"
+          git -C repo push --force origin HEAD:repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
