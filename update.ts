@@ -9,7 +9,12 @@ const octokit = new Octokit({
 const downloads = new Set<DownloadEngineNodejs>();
 const redirects = new Map<string, string>();
 
-async function gh(owner: string, repo: string, preRelease = false) {
+async function gh(
+  owner: string,
+  repo: string,
+  preRelease = false,
+  filter = /(?:)/,
+) {
   let release;
   if (preRelease) {
     const { data: releases } = await octokit.request(
@@ -31,9 +36,12 @@ async function gh(owner: string, repo: string, preRelease = false) {
     if (asset.content_type !== "application/vnd.android.package-archive") {
       continue;
     }
+    if (!filter.test(asset.name)) {
+      continue;
+    }
     const url = asset.browser_download_url;
     const fileName = `${Bun.randomUUIDv5(url, "url", "hex")}.apk`;
-    redirects.set(`/repo/${fileName}`, url);
+    redirects.set(`/${fileName}`, url);
     downloads.add(
       await downloadFile({
         url,
@@ -57,8 +65,8 @@ await Promise.allSettled([
   gh("Nekogram", "Nekogram"),
   gh("Miuzarte", "ScrcpyForAndroid"),
   gh("Bumblebee202111", "doubean-public"),
-  gh("zly2006", "zhihu-plus-plus"),
-  gh("liuchuancong", "pure_live"),
+  gh("zly2006", "zhihu-plus-plus", false, /^zhihu\+\+-lite\.apk$/),
+  // gh("liuchuancong", "pure_live"),
 ]);
 
 const downloader = await downloadSequence(
@@ -83,8 +91,17 @@ Bun.spawnSync([
   stderr: "inherit",
 });
 
+const { default: { packages } } = await import("./fdroid/repo/index-v2.json");
+
 const redirectsFile = Bun.file("fdroid/_redirects").writer();
-for (const [name, url] of redirects) {
-  await redirectsFile.write(`${name} ${url}\n`);
+for (const { versions } of Object.values(packages)) {
+  for (const { file } of Object.values(versions)) {
+    if (!redirects.has(file.name)) {
+      continue;
+    }
+    await redirectsFile.write(
+      `/repo${file.name} ${redirects.get(file.name)}\n`,
+    );
+  }
 }
 await redirectsFile.end();
