@@ -1,6 +1,7 @@
 import { Octokit } from "octokit";
 import type { DownloadEngineNodejs } from "ipull";
 import { downloadFile, downloadSequence } from "ipull";
+import { utimes } from "node:fs/promises";
 
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
@@ -68,6 +69,10 @@ await Promise.allSettled([
   gh("zly2006", "zhihu-plus-plus", false, /^zhihu\+\+-lite\.apk$/),
   gh("liuchuancong", "pure_live"),
 ]);
+
+for await (const path of new Bun.Glob("fdroid/repo/*.apk").scan()) {
+  await utimes(path, 0, 0);
+}
 
 const downloader = await downloadSequence(
   {
