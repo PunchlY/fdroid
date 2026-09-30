@@ -46,19 +46,19 @@ async function gh(owner: string, repo: string, preRelease = false) {
 }
 
 await Promise.allSettled([
-  // gh("open-ani", "animeko"),
-  // gh("deretame", "Breeze"),
+  gh("open-ani", "animeko"),
+  gh("deretame", "Breeze"),
   gh("HapeLee", "legado-with-MD3"),
-  // gh("bggRGjQaUbCoE", "PiliPlus"),
-  // gh("SlotSun", "dart_simple_live"),
-  // gh("cwuom", "NeriPlayer"),
-  // gh("zzc10086", "TiebaLite", true),
+  gh("bggRGjQaUbCoE", "PiliPlus"),
+  gh("SlotSun", "dart_simple_live"),
+  gh("cwuom", "NeriPlayer"),
+  gh("zzc10086", "TiebaLite", true),
   gh("NihilDigit", "bilby"),
-  // gh("Nekogram", "Nekogram"),
-  // gh("Miuzarte", "ScrcpyForAndroid"),
-  // gh("Bumblebee202111", "doubean-public"),
-  // gh("zly2006", "zhihu-plus-plus"),
-  // gh("liuchuancong", "pure_live"),
+  gh("Nekogram", "Nekogram"),
+  gh("Miuzarte", "ScrcpyForAndroid"),
+  gh("Bumblebee202111", "doubean-public"),
+  gh("zly2006", "zhihu-plus-plus"),
+  gh("liuchuancong", "pure_live"),
 ]);
 
 const downloader = await downloadSequence(
