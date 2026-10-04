@@ -70,6 +70,7 @@ await Promise.allSettled([
   gh("zly2006", "zhihu-plus-plus", false, /^zhihu\+\+-lite\.apk$/),
   gh("liuchuancong", "pure_live"),
   gh("Predidit", "Kazumi"),
+  gh("ReSukiSU", "ReSukiSU"),
 ]);
 
 for await (const path of new Bun.Glob("fdroid/repo/*.apk").scan()) {
