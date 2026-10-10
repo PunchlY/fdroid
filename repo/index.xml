@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fdroid>
+	<repo icon="icon.png" name="PunchlY's F-Droid" pubkey="30820503308202eba003020102021420976bb60c034074e645e82c2d860de943745201300d06092a864886f70d01010b05003011310f300d06035504030c066664726f6964301e170d3236303530333231343633305a170d3336303433303231343633305a3011310f300d06035504030c066664726f696430820222300d06092a864886f70d01010105000382020f003082020a0282020100a79f28193804e0b04d774053d95ed91838ff5ad0a174b06a37ab05e9b94d2dca8511a7fdd87b4d66ada2233d4f6f1c482e28cb09943323c18b8b98a907a7fff56fc260b2bbde7b67c6f96fa3c3e8943aff568e5513381c1886e7d81c8029d360977bc3ea093193c840645e63232fd7b8ca2ea0deaa5f5fbe8024047fbc235989c7767f6269fe3b83eaa1f3ce38fbcd3e8fccb0191327484cdddc5dbf589bdcc66224877beeee03e71ad76fa68ef74ac9d3f5524edb6aeaebc75f761da425be8b87e791aa33ddf2100b0c384c80befd02b6065367bd4723f63b6025d52b77bedf4fda6e5be69ac5ad78ae3d10c45f1a0163d2abfd31dca574789172b11deed9efa5239a50dd1a2c45cafd4186401a291c3c00e5b02eb3a8623015627453e16ce83612c0a0ddee4d39b1098f9a09ef7ea406e675aaac72135773a3e4ddb0ceeedd9c7173c873513e76f89d4c7c0d00046595f4ae18291da8d962476c3610506c0e975c619787b2d8b440b7d38403af1d6f8e6376fe20eb0cf0a3f3c434aabbf7b9d6b8e58b124cbfb0d6397f51d7ab3a701530bd3bcd7b28f3f3c4ea315efb5287717b661f5be763a095f0a9d6caee51b79de7fa813c5c2e536f4d421f8a453fb343dbf4acd4a7e4533f2a24dabd80571be4350408720c240cfdf56ff9d3696e0d61e1c7d754ecaf77bd5729395d338fe950d63e69549b033f9b4a242844bde37d0203010001a3533051301d0603551d0e0416041436cd40ad0dcc9118d89949a0f101dd643607ba72301f0603551d2304183016801436cd40ad0dcc9118d89949a0f101dd643607ba72300f0603551d130101ff040530030101ff300d06092a864886f70d01010b05000382020100709f765c56071506b7798acf75cabc84fb9199d1aa594e5e61e7e7bd351aefcb1058d247b3c264afc921ea0f6fbf6110a06c267a31026d5c4c95a2845bcc76846c8b6f06c546e3bc2adecf0c0a8970d44de7c3263a6c9fcdd17315d8052e068d88aa5e5e1841c9e391993922b277dbc5ccc0a56f3580e1ccdb7b282fc08f0dcc455e9c81dbc4b76dd9f2fdb38e70bd6ba4231bc19914c9ad3d99352451df1a0dc7324f3df43cb469aaa21e630a13f90b64bf167b41fc034dbcad5fec263ae64bf2fda273cb0151b54fdc99253a9ea6c33ba1c63283cba188ce0fa2731417f31da28b86795fbc21828a2d6fc9db5411d704e85b5cdeb76ce8a3ff3cb58e3ecd9f9d3e6fd8c3bee0fcbf802290e996b0175cc1f4b53853f7b8f9a5423a887c74ad2da15b815e2829d12f597ecc76aa7549f1d53a10cdf90d6456f9f4785512e6debeb2c2e359e401d95b758c7dc1b0c48f533ec317814c0c22386edb814c8104583a4f89986eaeb62fc5269f0302185ec92afc7df21f62e67f0ca4209b12f2892277b789737f42207c83782b17adc3ae5e803f96acdda96e6dd52cd89a8c2beecfebaef3f06d3d896cd1429fcfa1a8fba0c0d14cb25baaf59bff61e2e8ebe0be7cccf2d65e94d1d46391fb42a49fd7a8c8da9cc6852b32912c9a7b69abe8d7ff4cc7a263b738d421c85e8fc894ae4cf952b858506ba05b8092eb614b94dd6f1377" timestamp="1791607265" url="https://fdroid.punchly.eu.org/repo" version="30000">
+		<description>This is a repository of apps to be used with F-Droid. Applications in this repository are either official binaries built by the original application developers, or are binaries built from source by the admin of f-droid.org using the tools on https://gitlab.com/fdroid.</description>
+	</repo>
+	<application id="me.him188.ani">
+		<id>me.him188.ani</id>
+		<added>2026-09-30</added>
+		<lastupdated>2026-09-30</lastupdated>
+		<name>Animeko</name>
+		<summary></summary>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>6.2.0</version>
+			<versioncode>50406</versioncode>
+			<apkname>a2ee9bbd-cc0e-5b78-b027-93bc10a61693.apk</apkname>
+			<hash type="sha256">f0e28f56ae81119a3e70d217317a5df64a3fe67e99ac0319aea11b85f7a4d53a</hash>
+			<size>35809962</size>
+			<sdkver>27</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-09-30</added>
+			<sig>3d1e343877abe4182e05445d9b81f72f</sig>
+			<permissions>ACCESS_ADSERVICES_AD_ID,ACCESS_ADSERVICES_ATTRIBUTION,ACCESS_NETWORK_STATE,CAMERA,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,FOREGROUND_SERVICE_MEDIA_PLAYBACK,INTERNET,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,REQUEST_INSTALL_PACKAGES,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE,com.google.android.gms.permission.AD_ID,me.him188.ani.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="28" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="28" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>armeabi-v7a</nativecode>
+		</package>
+	</application>
+	<application id="me.him188.ani.tv">
+		<id>me.him188.ani.tv</id>
+		<added>2026-09-30</added>
+		<lastupdated>2026-09-30</lastupdated>
+		<name>Animeko TV</name>
+		<summary></summary>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>6.2.0</version>
+			<versioncode>50406</versioncode>
+			<apkname>166775db-c84e-562e-9fba-d6bfce34dfcc.apk</apkname>
+			<hash type="sha256">58e442ad3b17df29cfaa090f8e97e34b3c1cf9cdfbab4a637d3cbbbf22a5f843</hash>
+			<size>33713199</size>
+			<sdkver>27</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-09-30</added>
+			<sig>3d1e343877abe4182e05445d9b81f72f</sig>
+			<permissions>ACCESS_NETWORK_STATE,INTERNET,REQUEST_INSTALL_PACKAGES,WAKE_LOCK,me.him188.ani.tv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a</nativecode>
+			<features>android.software.leanback</features>
+		</package>
+	</application>
+	<application id="dev.bilby">
+		<id>dev.bilby</id>
+		<added>2026-10-05</added>
+		<lastupdated>2026-10-05</lastupdated>
+		<name>Bilby</name>
+		<summary></summary>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>0.17.1</version>
+			<versioncode>1701</versioncode>
+			<apkname>0c904b07-c1fd-513f-a0c0-b42cfce022b9.apk</apkname>
+			<hash type="sha256">515c844ce3c665ac8f6b6659b0a01169c4a88359f2cedfd3d2a21c661b6d1cdf</hash>
+			<size>9803793</size>
+			<sdkver>29</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-05</added>
+			<sig>2a8747cd1cda9436cadf8761ed0c13cd</sig>
+			<permissions>ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,FOREGROUND_SERVICE_MEDIA_PLAYBACK,INTERNET,POST_NOTIFICATIONS,RECEIVE_BOOT_COMPLETED,REQUEST_INSTALL_PACKAGES,WAKE_LOCK,dev.bilby.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+	</application>
+	<application id="com.zephyr.breeze">
+		<id>com.zephyr.breeze</id>
+		<added>2026-09-30</added>
+		<lastupdated>2026-09-30</lastupdated>
+		<name>Breeze</name>
+		<summary></summary>
+		<icon>com.zephyr.breeze.6221.png</icon>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>3.0.33</version>
+			<versioncode>6221</versioncode>
+			<apkname>519738c6-e2ad-57e2-b682-d96f17fac6b2.apk</apkname>
+			<hash type="sha256">1d66633b6978919c74968420115b55ea416cbb2d27d3a2b5760d8e03e7420196</hash>
+			<size>28250732</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-09-30</added>
+			<sig>c10e572a512904383ba26a5c49d8ddb3</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,INTERNET,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SCHEDULE_EXACT_ALARM,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>x86_64</nativecode>
+		</package>
+		<package>
+			<version>3.0.33</version>
+			<versioncode>4221</versioncode>
+			<apkname>97b58ec8-2862-5205-a08e-c6aca75d06ff.apk</apkname>
+			<hash type="sha256">4fcc2afce60fe34c5fdf8df6493c1b2e55bd33e7f025250459c1ad7ef3ae488d</hash>
+			<size>32707340</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-09-30</added>
+			<sig>c10e572a512904383ba26a5c49d8ddb3</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,INTERNET,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SCHEDULE_EXACT_ALARM,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+		<package>
+			<version>3.0.33</version>
+			<versioncode>3221</versioncode>
+			<apkname>158a652a-9018-598c-8a5b-e0970d34737f.apk</apkname>
+			<hash type="sha256">87f2d5c6dcb93dd1662b38c96a7872a2aa7b3163d00f773d8c4a776283c6cc2c</hash>
+			<size>26251141</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-09-30</added>
+			<sig>c10e572a512904383ba26a5c49d8ddb3</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,INTERNET,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SCHEDULE_EXACT_ALARM,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.zephyr.breeze.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>armeabi-v7a</nativecode>
+		</package>
+	</application>
+	<application id="com.github.bumblebee202111.doubean">
+		<id>com.github.bumblebee202111.doubean</id>
+		<added>2026-09-30</added>
+		<lastupdated>2026-09-30</lastupdated>
+		<name>doubean</name>
+		<summary></summary>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>0.13.2</version>
+			<versioncode>130004</versioncode>
+			<apkname>2fc2aac3-ad15-5f99-b0c2-776bf17c8ee8.apk</apkname>
+			<hash type="sha256">bf6fb63691f3a7803634933ccca06f25d58daf5591c764df607760f2a414db3f</hash>
+			<size>3438306</size>
+			<sdkver>27</sdkver>
+			<targetSdkVersion>35</targetSdkVersion>
+			<added>2026-09-30</added>
+			<sig>c46dfa6429bc636ba193d5834c4b40be</sig>
+			<permissions>ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,INTERNET,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,RECEIVE_BOOT_COMPLETED,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.github.bumblebee202111.doubean.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="29" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="29" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>arm64-v8a,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="com.predidit.kazumi">
+		<id>com.predidit.kazumi</id>
+		<added>2026-10-07</added>
+		<lastupdated>2026-10-07</lastupdated>
+		<name>Kazumi</name>
+		<summary></summary>
+		<icon>com.predidit.kazumi.203082.png</icon>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>2.3.8</version>
+			<versioncode>203082</versioncode>
+			<apkname>45b379ab-ae7e-5886-9325-cbbbb286d763.apk</apkname>
+			<hash type="sha256">8ae509af8ec6be5f6f1a2b2ab0b6b68ce66264c4ee359c17f86118283abb79a8</hash>
+			<size>32907746</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-10-07</added>
+			<sig>2dcebd316639ab4dfe8b19acbcd4f810</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,FOREGROUND_SERVICE_MEDIA_PLAYBACK,INTERNET,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_AUDIO,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,RECEIVE_BOOT_COMPLETED,REQUEST_INSTALL_PACKAGES,WAKE_LOCK,com.predidit.kazumi.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+	</application>
+	<application id="io.legato.kazusa">
+		<id>io.legato.kazusa</id>
+		<added>2026-10-10</added>
+		<lastupdated>2026-10-10</lastupdated>
+		<name>Legado</name>
+		<summary></summary>
+		<icon>io.legato.kazusa.18627.png</icon>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>3.26.16-beta.46</version>
+			<versioncode>18627</versioncode>
+			<apkname>34cb7857-8d3a-5f3d-9c1e-671b39f2bdd3.apk</apkname>
+			<hash type="sha256">e662dcb370de1d838d72fc4c90e318a69dba5c34b27e3249ebf499f849a69970</hash>
+			<size>20320279</size>
+			<sdkver>26</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-10</added>
+			<sig>77f71b462f07df244e7ff0682fac5021</sig>
+			<permissions>ACCESS_ADSERVICES_AD_ID,ACCESS_ADSERVICES_ATTRIBUTION,ACCESS_LOCAL_NETWORK,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,CAMERA,DOWNLOAD_WITHOUT_NOTIFICATION,FLASHLIGHT,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,FOREGROUND_SERVICE_MEDIA_PLAYBACK,INTERNET,MANAGE_EXTERNAL_STORAGE,MODIFY_AUDIO_SETTINGS,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_PHONE_STATE,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SYSTEM_ALERT_WINDOW,USE_BIOMETRIC,USE_FINGERPRINT,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE,com.google.android.gms.permission.AD_ID,io.legato.kazusa.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>armeabi-v7a</nativecode>
+		</package>
+	</application>
+	<application id="tw.nekomimi.nekogram">
+		<id>tw.nekomimi.nekogram</id>
+		<added>2026-10-01</added>
+		<lastupdated>2026-10-01</lastupdated>
+		<name>Nekogram</name>
+		<summary></summary>
+		<icon>tw.nekomimi.nekogram.71120.png</icon>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>12.10.6</version>
+			<versioncode>71120</versioncode>
+			<apkname>36cb8f07-bb48-5f61-ad28-f7af0c94b0a8.apk</apkname>
+			<hash type="sha256">5901ae69198db59b417a0c946f147ac3d657a20a7be4a6e14a992ca35a66a3cd</hash>
+			<size>50203868</size>
+			<sdkver>23</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-10-01</added>
+			<sig>e2e8b7008de515577bafb5a5e617eb58</sig>
+			<permissions>ACCESS_ADSERVICES_AD_ID,ACCESS_ADSERVICES_ATTRIBUTION,ACCESS_BACKGROUND_LOCATION,ACCESS_COARSE_LOCATION,ACCESS_FINE_LOCATION,ACCESS_MEDIA_LOCATION,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,AUTHENTICATE_ACCOUNTS,BLUETOOTH,BLUETOOTH_CONNECT,CAMERA,FOREGROUND_SERVICE,FOREGROUND_SERVICE_CAMERA,FOREGROUND_SERVICE_DATA_SYNC,FOREGROUND_SERVICE_LOCATION,FOREGROUND_SERVICE_MEDIA_PLAYBACK,FOREGROUND_SERVICE_MEDIA_PROJECTION,FOREGROUND_SERVICE_MICROPHONE,GET_ACCOUNTS,INSTALL_SHORTCUT,INTERNET,MANAGE_ACCOUNTS,MANAGE_OWN_CALLS,MODIFY_AUDIO_SETTINGS,POST_NOTIFICATIONS,READ_APP_BADGE,READ_CLIPBOARD,READ_CONTACTS,READ_EXTERNAL_STORAGE,READ_MEDIA_AUDIO,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,READ_PHONE_NUMBERS,READ_PHONE_STATE,READ_PROFILE,READ_SYNC_SETTINGS,RECEIVE_BOOT_COMPLETED,RECORD_AUDIO,REQUEST_INSTALL_PACKAGES,SYSTEM_ALERT_WINDOW,USE_BIOMETRIC,USE_FINGERPRINT,USE_FULL_SCREEN_INTENT,VIBRATE,WAKE_LOCK,WRITE_CONTACTS,WRITE_EXTERNAL_STORAGE,WRITE_SYNC_SETTINGS,com.anddoes.launcher.permission.UPDATE_COUNT,com.android.launcher.permission.INSTALL_SHORTCUT,com.android.launcher.permission.UNINSTALL_SHORTCUT,com.android.vending.BILLING,com.google.android.c2dm.permission.RECEIVE,com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE,com.google.android.gms.permission.AD_ID,com.htc.launcher.permission.READ_SETTINGS,com.htc.launcher.permission.UPDATE_SHORTCUT,com.huawei.android.launcher.permission.CHANGE_BADGE,com.huawei.android.launcher.permission.READ_SETTINGS,com.huawei.android.launcher.permission.WRITE_SETTINGS,com.majeur.launcher.permission.UPDATE_BADGE,com.oppo.launcher.permission.READ_SETTINGS,com.oppo.launcher.permission.WRITE_SETTINGS,com.sec.android.provider.badge.permission.READ,com.sec.android.provider.badge.permission.WRITE,com.sonyericsson.home.permission.BROADCAST_BADGE,com.sonymobile.home.permission.PROVIDER_INSERT_BADGE,me.everything.badger.permission.BADGE_COUNT_READ,me.everything.badger.permission.BADGE_COUNT_WRITE,tw.nekomimi.nekogram.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="30" name="android.permission.BLUETOOTH"/>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="29" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+	</application>
+	<application id="com.example.piliplus">
+		<id>com.example.piliplus</id>
+		<added>2026-10-06</added>
+		<lastupdated>2026-10-06</lastupdated>
+		<name>PiliPlus</name>
+		<summary></summary>
+		<icon>com.example.piliplus.5453.png</icon>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>2.1.6-4ed5968f3</version>
+			<versioncode>5453</versioncode>
+			<apkname>271af59f-accd-50f2-b163-2a9b0233aa1c.apk</apkname>
+			<hash type="sha256">b7c946a935081758413eb8a6993bc0a82d81d57beeea8d248365e4615a0d0b4d</hash>
+			<size>24951943</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-06</added>
+			<sig>1b3528be8836d28d434b1f2274bbba8e</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_MEDIA_PLAYBACK,INTERNET,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_AUDIO,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,WRITE_SETTINGS,com.example.piliplus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="28" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>x86_64</nativecode>
+		</package>
+	</application>
+	<application id="com.resukisu.resukisu">
+		<id>com.resukisu.resukisu</id>
+		<added>2026-10-04</added>
+		<lastupdated>2026-10-04</lastupdated>
+		<name>ReSukiSU</name>
+		<summary></summary>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>v4.2.0-rc3</version>
+			<versioncode>35171</versioncode>
+			<apkname>558420bf-b00c-5ec7-93d8-5df85c423287.apk</apkname>
+			<hash type="sha256">76a945d4b8d7efb72535faeec43b0d40b77221e370e572116a4aeae109931cbe</hash>
+			<size>9104915</size>
+			<sdkver>26</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-04</added>
+			<sig>ea6f24adcb2587bac98577c3654bb47b</sig>
+			<permissions>ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,INTERNET,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,RECEIVE_BOOT_COMPLETED,REQUEST_INSTALL_PACKAGES,WRITE_EXTERNAL_STORAGE,com.resukisu.resukisu.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="32" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>x86_64</nativecode>
+		</package>
+	</application>
+	<application id="io.github.miuzarte.scrcpyforandroid">
+		<id>io.github.miuzarte.scrcpyforandroid</id>
+		<added>2026-10-06</added>
+		<lastupdated>2026-10-06</lastupdated>
+		<name>Scrcpy for Android</name>
+		<summary></summary>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>0.7.0</version>
+			<versioncode>52</versioncode>
+			<apkname>1d8aedf2-354a-5cb7-baed-2abceef99baa.apk</apkname>
+			<hash type="sha256">0ad86a6b52aeda52412040480460d9ddbf345e8fa46c92a15b7ae055dde4559e</hash>
+			<size>27372111</size>
+			<sdkver>26</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-06</added>
+			<sig>63ff191a89ec5be35b2a3d739ba846a2</sig>
+			<permissions>ACCESS_LOCAL_NETWORK,ACCESS_NETWORK_STATE,CHANGE_WIFI_MULTICAST_STATE,INTERNET,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,USE_BIOMETRIC,USE_FINGERPRINT,WAKE_LOCK,io.github.miuzarte.scrcpyforandroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>armeabi-v7a</nativecode>
+		</package>
+	</application>
+	<application id="com.slotsun.slive">
+		<id>com.slotsun.slive</id>
+		<added>2026-09-30</added>
+		<lastupdated>2026-09-30</lastupdated>
+		<name>Slive</name>
+		<summary></summary>
+		<icon>com.slotsun.slive.14814.png</icon>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>1.8.14</version>
+			<versioncode>14814</versioncode>
+			<apkname>ec396174-5e75-5a53-bceb-716b6dcaaf96.apk</apkname>
+			<hash type="sha256">016be355b35519ab55959ecaf7a9ed26e3ce20f42726ec63cbcac68248b1af18</hash>
+			<size>25838587</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-09-30</added>
+			<sig>65bd5e1a3b1ae4a262f385ab94f691cc</sig>
+			<permissions>ACCESS_ADSERVICES_AD_ID,ACCESS_ADSERVICES_ATTRIBUTION,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,CAMERA,INTERNET,MANAGE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE,com.google.android.gms.permission.AD_ID,com.slotsun.slive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>x86_64</nativecode>
+		</package>
+		<package>
+			<version>1.8.14</version>
+			<versioncode>12814</versioncode>
+			<apkname>52016fc5-ac6d-51ce-be5f-a42a92674328.apk</apkname>
+			<hash type="sha256">6be82439108efbaaa0913d0595f673a6b62bbcdbce025ac9eec6403b9948cc30</hash>
+			<size>24726496</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-09-30</added>
+			<sig>65bd5e1a3b1ae4a262f385ab94f691cc</sig>
+			<permissions>ACCESS_ADSERVICES_AD_ID,ACCESS_ADSERVICES_ATTRIBUTION,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,CAMERA,INTERNET,MANAGE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE,com.google.android.gms.permission.AD_ID,com.slotsun.slive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+		<package>
+			<version>1.8.14</version>
+			<versioncode>11814</versioncode>
+			<apkname>6453b282-1a60-577c-a75e-0c3f91eb7dec.apk</apkname>
+			<hash type="sha256">89fabf2121e2251ecb0cdbdb71d1a38a588609aee5d8ef3345f86db7a922b690</hash>
+			<size>23524650</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-09-30</added>
+			<sig>65bd5e1a3b1ae4a262f385ab94f691cc</sig>
+			<permissions>ACCESS_ADSERVICES_AD_ID,ACCESS_ADSERVICES_ATTRIBUTION,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,CAMERA,INTERNET,MANAGE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE,com.google.android.gms.permission.AD_ID,com.slotsun.slive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>armeabi-v7a</nativecode>
+		</package>
+	</application>
+	<application id="com.github.zly2006.zhplus.lite">
+		<id>com.github.zly2006.zhplus.lite</id>
+		<added>2026-09-30</added>
+		<lastupdated>2026-09-30</lastupdated>
+		<name>知乎++</name>
+		<summary></summary>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>0.30.1</version>
+			<versioncode>748</versioncode>
+			<apkname>ffd86095-3468-5645-9510-9a3e7b03be64.apk</apkname>
+			<hash type="sha256">50db89f190d71f3702b87f0f2c8f3a26f3efb89578dce13be17af3255027b7a5</hash>
+			<size>5772161</size>
+			<sdkver>27</sdkver>
+			<targetSdkVersion>35</targetSdkVersion>
+			<added>2026-09-30</added>
+			<sig>e7615f9d477427061abff7de21bc201d</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,CAMERA,FOREGROUND_SERVICE,FOREGROUND_SERVICE_MEDIA_PLAYBACK,INTERNET,READ_EXTERNAL_STORAGE,READ_MEDIA_IMAGES,READ_MEDIA_VISUAL_USER_SELECTED,REQUEST_INSTALL_PACKAGES,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.github.zly2006.zhplus.lite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="32" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="com.mystyle.purelive">
+		<id>com.mystyle.purelive</id>
+		<added>2026-10-10</added>
+		<lastupdated>2026-10-10</lastupdated>
+		<name>纯粹直播</name>
+		<summary></summary>
+		<icon>com.mystyle.purelive.8108.png</icon>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>3.1.19</version>
+			<versioncode>8108</versioncode>
+			<apkname>5ec93231-042d-5c8f-8a4e-22ea4e6185ef.apk</apkname>
+			<hash type="sha256">79e17a2e9e4b241adc74fa339fe274d2cafba7c0d2e1c7126a00dd9316e4c4be</hash>
+			<size>147175967</size>
+			<sdkver>26</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-10</added>
+			<sig>e68d173664ac40c213142c5942a3fdf8</sig>
+			<permissions>ACCESS_LOCAL_NETWORK,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,CAMERA,CHANGE_NETWORK_STATE,CHANGE_WIFI_MULTICAST_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,FOREGROUND_SERVICE_MEDIA_PLAYBACK,FOREGROUND_SERVICE_REMOTE_MESSAGING,INTERNET,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_AUDIO,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SYSTEM_ALERT_WINDOW,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.google.android.providers.gsf.permission.READ_GSERVICES,com.mystyle.purelive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="29" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>x86_64</nativecode>
+		</package>
+		<package>
+			<version>3.1.19</version>
+			<versioncode>6108</versioncode>
+			<apkname>f833548e-debd-5651-8930-e9433c029c9c.apk</apkname>
+			<hash type="sha256">96025dae626780b3c29bdda9ab964d194436124ef191c194716de4eaa15c878b</hash>
+			<size>138820165</size>
+			<sdkver>26</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-10</added>
+			<sig>e68d173664ac40c213142c5942a3fdf8</sig>
+			<permissions>ACCESS_LOCAL_NETWORK,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,CAMERA,CHANGE_NETWORK_STATE,CHANGE_WIFI_MULTICAST_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,FOREGROUND_SERVICE_MEDIA_PLAYBACK,FOREGROUND_SERVICE_REMOTE_MESSAGING,INTERNET,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_AUDIO,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SYSTEM_ALERT_WINDOW,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.google.android.providers.gsf.permission.READ_GSERVICES,com.mystyle.purelive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="29" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>arm64-v8a</nativecode>
+		</package>
+		<package>
+			<version>3.1.19</version>
+			<versioncode>5108</versioncode>
+			<apkname>2b4dd771-cea1-5c1c-a955-59524f62534d.apk</apkname>
+			<hash type="sha256">eff3e18bee561de5040a672df0e6478e13784e3b618fd19e5026aa8a89cb30d2</hash>
+			<size>118453453</size>
+			<sdkver>26</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-10</added>
+			<sig>e68d173664ac40c213142c5942a3fdf8</sig>
+			<permissions>ACCESS_LOCAL_NETWORK,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,CAMERA,CHANGE_NETWORK_STATE,CHANGE_WIFI_MULTICAST_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,FOREGROUND_SERVICE_MEDIA_PLAYBACK,FOREGROUND_SERVICE_REMOTE_MESSAGING,INTERNET,MANAGE_EXTERNAL_STORAGE,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_AUDIO,READ_MEDIA_IMAGES,READ_MEDIA_VIDEO,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,SYSTEM_ALERT_WINDOW,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,com.google.android.providers.gsf.permission.READ_GSERVICES,com.mystyle.purelive.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="29" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>armeabi-v7a</nativecode>
+		</package>
+	</application>
+	<application id="com.huanchengfly.tieba.post">
+		<id>com.huanchengfly.tieba.post</id>
+		<added>2026-09-30</added>
+		<lastupdated>2026-09-30</lastupdated>
+		<name>贴吧 Lite</name>
+		<summary></summary>
+		<icon>com.huanchengfly.tieba.post.390100.png</icon>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>4.0.0-beta.2+2be3593</version>
+			<versioncode>390100</versioncode>
+			<apkname>4a49724b-7a41-5d53-a5ad-cff673f28105.apk</apkname>
+			<hash type="sha256">6e9ce131698d81b4f6b8d8da82006bebdbe905a5bc9b6028f224b48c1157206c</hash>
+			<size>11330901</size>
+			<sdkver>23</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-09-30</added>
+			<sig>d0b499c1c321f3ce3f3024819a6eb1e2</sig>
+			<permissions>ACCESS_COARSE_LOCATION,ACCESS_FINE_LOCATION,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_SPECIAL_USE,INTERNET,POST_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_IMAGES,READ_PHONE_STATE,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,REQUEST_INSTALL_PACKAGES,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,WRITE_SETTINGS,com.android.launcher.permission.INSTALL_SHORTCUT,com.android.launcher.permission.READ_SETTINGS,com.android.launcher.permission.UNINSTALL_SHORTCUT,com.asus.msa.SupplementaryDID.ACCESS,com.google.android.gms.permission.AD_ID,com.huanchengfly.tieba.post.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION,com.miui.personalassistant.permission.FAVORITE,freemme.permission.msa</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="28" name="android.permission.READ_PHONE_STATE"/>
+			<uses-permission maxSdkVersion="28" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+	</application>
+	<application id="moe.ouom.neriplayer">
+		<id>moe.ouom.neriplayer</id>
+		<added>2026-10-09</added>
+		<lastupdated>2026-10-09</lastupdated>
+		<name>音理音理!</name>
+		<summary></summary>
+		<icon>moe.ouom.neriplayer.26100815.png</icon>
+		<desc>No description available</desc>
+		<license>Unknown</license>
+		<categories>fdroid</categories>
+		<category>fdroid</category>
+		<web></web>
+		<source></source>
+		<tracker></tracker>
+		<marketversion></marketversion>
+		<marketvercode>2147483647</marketvercode>
+		<package>
+			<version>285beb6b.10082255</version>
+			<versioncode>26100815</versioncode>
+			<apkname>372519d9-f196-521b-a943-cc20730ca4f9.apk</apkname>
+			<hash type="sha256">7b98fe7fdcb63465971c06d360cd3d31604434d645acccc74b3be7fac3c51565</hash>
+			<size>13708091</size>
+			<sdkver>28</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-10-09</added>
+			<sig>e348db6e968004c59855b423409b41e5</sig>
+			<permissions>ACCESS_NETWORK_STATE,BLUETOOTH_CONNECT,FOREGROUND_SERVICE,FOREGROUND_SERVICE_DATA_SYNC,FOREGROUND_SERVICE_MEDIA_PLAYBACK,FOREGROUND_SERVICE_SPECIAL_USE,INTERNET,MODIFY_AUDIO_SETTINGS,POST_NOTIFICATIONS,POST_PROMOTED_NOTIFICATIONS,READ_EXTERNAL_STORAGE,READ_MEDIA_AUDIO,RECEIVE_BOOT_COMPLETED,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,RUN_USER_INITIATED_JOBS,SYSTEM_ALERT_WINDOW,VIBRATE,WAKE_LOCK,WRITE_EXTERNAL_STORAGE,moe.ouom.neriplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION,moe.shizuku.manager.permission.API_V23</permissions>
+			<uses-permission maxSdkVersion="32" name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission maxSdkVersion="28" name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<nativecode>armeabi-v7a</nativecode>
+		</package>
+	</application>
+</fdroid>
