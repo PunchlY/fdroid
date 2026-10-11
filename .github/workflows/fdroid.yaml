@@ -35,7 +35,7 @@ jobs:
           echo "${{ secrets.KEYSTORE_P12 }}" | base64 -d > fdroid/keystore.p12
           echo "${{ secrets.CONFIG_YML }}" | base64 -d > fdroid/config.yml
 
-          chmod 0644 fdroid/keystore.p12 fdroid/config.yml
+          chmod 0600 fdroid/keystore.p12 fdroid/config.yml
 
           nix develop . --command bun update.ts
 
@@ -47,7 +47,7 @@ jobs:
 
           git -C fdroid add -A repo tmp/apkcache.json _redirects
           git -C fdroid rm --cached 'repo/*.apk'
-          git -C fdroid rm --cached repo/diff
+          git -C fdroid rm --cached -r repo/diff
           git -C fdroid commit -m "update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
           git -C fdroid branch -M repo
