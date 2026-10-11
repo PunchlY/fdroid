@@ -18,8 +18,10 @@ const metadatas = new Map<string, Record<string, any>>();
 async function gh(cfg: {
   owner: string;
   repo: string;
+  tag?: string;
   preRelease?: boolean;
   filter?:
+    | string
     | RegExp
     | ((name: string, release: components["schemas"]["release"]) => boolean);
 }) {
@@ -34,7 +36,14 @@ async function gh(cfg: {
   });
 
   let release;
-  if (cfg.preRelease) {
+  if (cfg.tag) {
+    const { data } = await octokit.rest.repos.getReleaseByTag({
+      owner: cfg.owner,
+      repo: cfg.repo,
+      tag: cfg.tag,
+    });
+    release = data;
+  } else if (cfg.preRelease) {
     const { data: releases } = await octokit.rest.repos.listReleases({
       owner: cfg.owner,
       repo: cfg.repo,
@@ -54,7 +63,9 @@ async function gh(cfg: {
       continue;
     }
     if (
-      filter instanceof RegExp
+      typeof filter === "string"
+        ? asset.name === filter
+        : filter instanceof RegExp
         ? !filter.test(asset.name)
         : !filter(asset.name, release)
     ) {
