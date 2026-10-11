@@ -167,6 +167,25 @@ await Promise.all([
     preRelease: true,
     filter: /universal-release\.apk$/,
   }),
+  gh({
+    owner: "Droid-Deck",
+    repo: "DroidDeck",
+    filter: (name, release) => name === `DroidDeck-${release.tag_name}.apk`,
+  }),
+  gh({
+    owner: "YuKongA",
+    repo: "ghostlock-app",
+    tag: "pre-release",
+  }),
+  gh({
+    owner: "HmnDev-Tech",
+    repo: "shevery",
+  }),
+  gh({
+    owner: "ChaoMixian",
+    repo: "vFlow",
+    filter: "app-universal-release.apk",
+  }),
 ]);
 
 const downloader = await downloadSequence(
