@@ -24,7 +24,11 @@ async function gh(cfg: {
     | string
     | string[]
     | RegExp
-    | ((name: string, release: components["schemas"]["release"]) => boolean);
+    | ((name: string, release: components["schemas"]["release"]) =>
+      | string
+      | string[]
+      | RegExp
+      | boolean);
 }) {
   const { data: repo } = await octokit.rest.repos.get({
     owner: cfg.owner,
@@ -61,16 +65,17 @@ async function gh(cfg: {
     if (asset.content_type !== "application/vnd.android.package-archive") {
       continue;
     }
+    const filter = typeof cfg.filter === "function"
+      ? cfg.filter(asset.name, release)
+      : cfg.filter;
     if (
-      typeof cfg.filter === "string"
-        ? asset.name !== cfg.filter
-        : typeof cfg.filter === "function"
-        ? !cfg.filter(asset.name, release)
-        : cfg.filter instanceof RegExp
-        ? !cfg.filter.test(asset.name)
-        : Array.isArray(cfg.filter)
-        ? !cfg.filter.includes(asset.name)
-        : false
+      typeof filter === "string"
+        ? asset.name !== filter
+        : filter instanceof RegExp
+        ? !filter.test(asset.name)
+        : Array.isArray(filter)
+        ? !filter.includes(asset.name)
+        : !(filter ?? true)
     ) {
       continue;
     }
@@ -113,7 +118,7 @@ await Promise.all([
     owner: "HapeLee",
     repo: "legado-with-MD3",
     preRelease: true,
-    filter: (name, release) => name === `legado-${release.tag_name}.apk`,
+    filter: (_, { tag_name }) => `legado-${tag_name}.apk`,
   }),
   gh({
     owner: "bggRGjQaUbCoE",
@@ -173,7 +178,7 @@ await Promise.all([
   gh({
     owner: "Droid-Deck",
     repo: "DroidDeck",
-    filter: (name, release) => name === `DroidDeck-${release.tag_name}.apk`,
+    filter: (_, { tag_name }) => `DroidDeck-${tag_name}.apk`,
   }),
   gh({
     owner: "YuKongA",
