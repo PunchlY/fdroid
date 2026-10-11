@@ -22,11 +22,10 @@ async function gh(cfg: {
   preRelease?: boolean;
   filter?:
     | string
+    | string[]
     | RegExp
     | ((name: string, release: components["schemas"]["release"]) => boolean);
 }) {
-  const filter = cfg.filter ?? /(?:)/;
-
   const { data: repo } = await octokit.rest.repos.get({
     owner: cfg.owner,
     repo: cfg.repo,
@@ -63,11 +62,15 @@ async function gh(cfg: {
       continue;
     }
     if (
-      typeof filter === "string"
-        ? asset.name !== filter
-        : filter instanceof RegExp
-        ? !filter.test(asset.name)
-        : !filter(asset.name, release)
+      typeof cfg.filter === "string"
+        ? asset.name !== cfg.filter
+        : typeof cfg.filter === "function"
+        ? !cfg.filter(asset.name, release)
+        : cfg.filter instanceof RegExp
+        ? !cfg.filter.test(asset.name)
+        : Array.isArray(cfg.filter)
+        ? !cfg.filter.includes(asset.name)
+        : false
     ) {
       continue;
     }
@@ -234,20 +237,24 @@ await Bun.file("fdroid/_redirects").write(
 
 const apkcache = await import("./fdroid/tmp/apkcache.json");
 await Bun.file("./fdroid/tmp/apkcache.json").write(
-  JSON.stringify({
-    METADATA_VERSION: apkcache.METADATA_VERSION,
-    allow_disabled_algorithms: apkcache.allow_disabled_algorithms,
-    ...Object.fromEntries(
-      await Array.fromAsync(async function* () {
-        for await (const name of new Bun.Glob("*.apk").scan("fdroid/repo")) {
-          if (name in apkcache) {
-            // @ts-ignore
-            yield [name, apkcache[name]];
+  JSON.stringify(
+    {
+      METADATA_VERSION: apkcache.METADATA_VERSION,
+      allow_disabled_algorithms: apkcache.allow_disabled_algorithms,
+      ...Object.fromEntries(
+        await Array.fromAsync(async function* () {
+          for await (const name of new Bun.Glob("*.apk").scan("fdroid/repo")) {
+            if (name in apkcache) {
+              // @ts-ignore
+              yield [name, apkcache[name]];
+            }
           }
-        }
-      }()),
-    ),
-  }),
+        }()),
+      ),
+    },
+    null,
+    2,
+  ),
 );
 
 for await (const path of new Bun.Glob("fdroid/metadata/*.yml").scan()) {
