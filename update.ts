@@ -78,7 +78,7 @@ async function gh(cfg: {
     const fileName = `${Bun.randomUUIDv5(url, "url", "hex")}.apk`;
     redirects.set(`/${fileName}`, url);
     metadatas.set(`/${fileName}`, {
-      AuthorName: author.name || undefined,
+      AuthorName: author.name || author.login,
       AuthorEmail: author.email || undefined,
       License: repo.license?.spdx_id || undefined,
       WebSite: repo.homepage || undefined,
