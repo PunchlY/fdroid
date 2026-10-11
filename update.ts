@@ -64,7 +64,7 @@ async function gh(cfg: {
     }
     if (
       typeof filter === "string"
-        ? asset.name === filter
+        ? asset.name !== filter
         : filter instanceof RegExp
         ? !filter.test(asset.name)
         : !filter(asset.name, release)
