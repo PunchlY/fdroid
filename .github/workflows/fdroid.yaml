@@ -45,9 +45,7 @@ jobs:
           git -C fdroid config user.name github-actions[bot]
           git -C fdroid config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-          git -C fdroid add -A repo tmp/apkcache.json _redirects
-          git -C fdroid rm --cached 'repo/*.apk'
-          git -C fdroid rm --cached -r repo/diff
+          git -C fdroid add -A repo tmp/apkcache.json _redirects ':(exclude)repo/*.apk' ':(exclude)repo/diff/'
           git -C fdroid commit -m "update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
           git -C fdroid branch -M repo
