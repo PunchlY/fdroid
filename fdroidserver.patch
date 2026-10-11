@@ -1,0 +1,12 @@
+diff --git a/fdroidserver/common.py b/fdroidserver/common.py
+--- a/fdroidserver/common.py
++++ b/fdroidserver/common.py
+@@ -3599,7 +3599,7 @@ def get_first_signer_certificate(apkpath):
+                 path=apkpath
+             )
+         )
+-        return
++        # return
+ 
+     return cert_encoded
+ 

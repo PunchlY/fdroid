@@ -14,7 +14,11 @@
       imports = [
         inputs.treefmt-nix.flakeModule
       ];
-      perSystem = {pkgs, ...}: {
+      perSystem = {
+        self',
+        pkgs,
+        ...
+      }: {
         treefmt = {
           programs.deadnix = {
             enable = true;
@@ -28,9 +32,17 @@
           programs.deno.enable = true;
         };
 
+        packages.fdroidserver = pkgs.fdroidserver.overrideAttrs (old: {
+          patches =
+            (old.patches or [])
+            ++ [
+              ./fdroidserver.patch
+            ];
+        });
+
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
-            fdroidserver
+            self'.packages.fdroidserver
             jdk
             bun
             nodejs

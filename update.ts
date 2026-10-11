@@ -187,7 +187,12 @@ await Promise.all([
   gh({
     owner: "ChaoMixian",
     repo: "vFlow",
-    filter: "app-universal-release.apk",
+    filter: [
+      "app-arm64-v8a-release.apk",
+      "app-armeabi-v7a-release.apk",
+      "app-x86-release.apk",
+      "app-x86_64-release.apk",
+    ],
   }),
 ]);
 
@@ -200,7 +205,7 @@ const downloader = await downloadSequence(
 
 await downloader.download();
 
-await rm("fdroid/repo/icons/icon.png");
+await rm("fdroid/repo/icons/icon.png", { force: true });
 
 Bun.spawnSync([
   "fdroid",
