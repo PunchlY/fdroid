@@ -205,6 +205,10 @@ await Promise.all([
       "app-x86_64-release.apk",
     ],
   }),
+  gh({
+    owner: "xiaoyvyv",
+    repo: "bangumi",
+  }),
 ]);
 
 const downloader = await downloadSequence(
