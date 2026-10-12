@@ -15,20 +15,37 @@ const redirects = new Map<string, string>();
 
 const metadatas = new Map<string, Record<string, any>>();
 
+type Filter<T extends any[]> =
+  | string
+  | string[]
+  | RegExp
+  | ((name: string, ...args: T) =>
+    | string
+    | string[]
+    | RegExp
+    | boolean);
+
+function callFilter<T extends any[]>(
+  call: Filter<T> | undefined,
+  name: string,
+  ...args: T
+) {
+  const filter = typeof call === "function" ? call(name, ...args) : call;
+  return typeof filter === "string"
+    ? name === filter
+    : filter instanceof RegExp
+    ? filter.test(name)
+    : Array.isArray(filter)
+    ? filter.includes(name)
+    : filter ?? true;
+}
+
 async function gh(cfg: {
   owner: string;
   repo: string;
   tag?: string;
   preRelease?: boolean;
-  filter?:
-    | string
-    | string[]
-    | RegExp
-    | ((name: string, release: components["schemas"]["release"]) =>
-      | string
-      | string[]
-      | RegExp
-      | boolean);
+  filter?: Filter<[components["schemas"]["release"]]>;
 }) {
   const { data: repo } = await octokit.rest.repos.get({
     owner: cfg.owner,
@@ -65,18 +82,7 @@ async function gh(cfg: {
     if (asset.content_type !== "application/vnd.android.package-archive") {
       continue;
     }
-    const filter = typeof cfg.filter === "function"
-      ? cfg.filter(asset.name, release)
-      : cfg.filter;
-    if (
-      typeof filter === "string"
-        ? asset.name !== filter
-        : filter instanceof RegExp
-        ? !filter.test(asset.name)
-        : Array.isArray(filter)
-        ? !filter.includes(asset.name)
-        : !(filter ?? true)
-    ) {
+    if (!callFilter(cfg.filter, asset.name, release)) {
       continue;
     }
     const url = asset.browser_download_url;
@@ -226,21 +232,19 @@ Bun.spawnSync([
 
 const { packages } = await import("./fdroid/repo/index-v2.json");
 
-const files = new Set<string>();
-
 for (const [packageName, { versions }] of Object.entries(packages)) {
   for (const { file } of Object.values(versions)) {
     if (!metadatas.has(file.name)) {
       continue;
     }
-    files.add(file.name);
     metadatas.set(packageName, metadatas.get(file.name)!);
+    break;
   }
 }
 
 await Bun.file("fdroid/_redirects").write(
-  files.values()
-    .map((name) => `${join("/repo", name)} ${redirects.get(name)}`)
+  redirects.entries()
+    .map(([name, url]) => `${join("/repo", name)} ${url}`)
     .toArray()
     .join("\n"),
 );
