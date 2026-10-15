@@ -98,7 +98,7 @@ export class Fdroid {
         author: author.name || author.login,
         email: author.email || undefined,
         license: repo.license?.spdx_id || undefined,
-        website: repo.homepage || undefined,
+        website: repo.homepage ? URL.parse(repo.homepage)?.href : undefined,
         source: repo.html_url,
         issue: repo.has_issues ? `${repo.html_url}/issues` : undefined,
         changelogUrl: `${repo.html_url}/releases`,
