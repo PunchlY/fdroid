@@ -46,10 +46,9 @@
             jdk
             bun
             nodejs
+            just
+            apkeditor
           ];
-          shellHook = ''
-            bun install --frozen-lockfile --linker isolated
-          '';
         };
       };
     });

@@ -37,7 +37,7 @@ jobs:
 
           chmod 0600 fdroid/keystore.p12 fdroid/config.yml
 
-          nix develop . --command bun update.ts
+          nix develop . --command just
 
           rm -rf fdroid/.git
 
