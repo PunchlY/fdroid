@@ -3,7 +3,7 @@ import type { DownloadEngineNodejs } from "ipull";
 import { downloadFile, downloadSequence } from "ipull";
 import { Octokit } from "octokit";
 import PQueue from "p-queue";
-import { basename } from "node:path";
+import { link } from "node:fs/promises";
 
 type Filter<T extends any[]> =
   | string
@@ -102,7 +102,8 @@ export class Fdroid {
         source: repo.html_url,
         issue: repo.has_issues ? `${repo.html_url}/issues` : undefined,
         changelogUrl: `${repo.html_url}/releases`,
-        changelog: release.body ? Bun.markdown.html(release.body) : undefined,
+        // changelog: release.body ? Bun.markdown.html(release.body) : undefined,
+        changelog: release.body || undefined,
         summary: repo.description || undefined,
         categories: [],
       };
@@ -156,12 +157,11 @@ export class Fdroid {
         hasher.update(chunk);
       }
       const hash = hasher.digest("hex").slice(0, 8);
-      const file = Bun.file(
-        `./fdroid/repo/${info.package}.${info.VersionCode}.${hash}.apk`,
-      );
-      await file.write(Bun.file(pkg.finalFileAbsolutePath));
+      const packageFile = `${info.package}.${info.VersionCode}.${hash}.apk`;
 
-      await redirects.write(`/repo/${basename(file.name!)} ${meta.url}\n`);
+      await link(pkg.finalFileAbsolutePath, `./fdroid/repo/${packageFile}`);
+
+      await redirects.write(`/repo/${packageFile} ${meta.url}\n`);
 
       await Bun.file(`fdroid/metadata/${info.package}.yml`)
         .write(Bun.YAML.stringify(
@@ -182,7 +182,7 @@ export class Fdroid {
         ));
       if (meta.changelog) {
         await Bun.file(
-          `fdroid/repo/${info.package}/en-US/changelogs/${info.VersionCode}.txt`,
+          `fdroid/metadata/${info.package}/en-US/changelogs/${info.VersionCode}.txt`,
         ).write(meta.changelog);
       }
     }
