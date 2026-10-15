@@ -24,13 +24,7 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-          git fetch origin repo || true
-
-          if git show-ref --verify --quiet refs/remotes/origin/repo; then
-            git clone --depth 1 --branch repo "$(git remote get-url origin)" fdroid
-          else
-            mkdir fdroid
-          fi
+          mkdir fdroid
 
           echo "${{ secrets.KEYSTORE_P12 }}" | base64 -d > fdroid/keystore.p12
           echo "${{ secrets.CONFIG_YML }}" | base64 -d > fdroid/config.yml
