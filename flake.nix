@@ -6,6 +6,10 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    cache-nix-action = {
+      url = "github:nix-community/cache-nix-action";
+      flake = false;
+    };
   };
 
   outputs = inputs:
@@ -39,6 +43,18 @@
               ./fdroidserver.patch
             ];
         });
+
+        packages.saveFromGC =
+          (import "${inputs.cache-nix-action}/saveFromGC.nix" {
+            inherit pkgs inputs;
+            inputsInclude = [
+              "nixpkgs"
+              "flake-parts"
+            ];
+            derivations = [
+              self'.devShells.default
+            ];
+          }).package;
 
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [

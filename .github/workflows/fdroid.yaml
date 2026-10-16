@@ -9,6 +9,10 @@ permissions:
   contents: write
   actions: write
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   apps:
     name: "Generate repo from apps listing"
@@ -18,7 +22,26 @@ jobs:
       - uses: actions/checkout@v5
       - uses: cachix/install-nix-action@v31
 
-      - uses: actions/cache@v4
+      - name: Restore and save Nix store
+        uses: nix-community/cache-nix-action@v7
+        with:
+          primary-key: nix-${{ runner.os }}-${{ hashFiles('**/*.nix', '**/flake.lock') }}
+          restore-prefixes-first-match: nix-${{ runner.os }}-
+          gc-max-store-size-linux: 4G
+          purge: true
+          purge-prefixes: nix-${{ runner.os }}-
+          purge-created: 0
+          purge-last-accessed: P1DT12H
+          purge-primary-key: never
+
+      - name: Restore bun
+        uses: actions/cache@v6
+        with:
+          path: ~/.bun/install/cache
+          key: bun-${{ runner.os }}-${{ hashFiles('**/bun.lock') }}
+
+      - name: Restore .cache
+        uses: actions/cache@v6
         with:
           path: .cache
           key: cache-${{ github.run_id }}-${{ github.run_attempt }}
@@ -32,8 +55,11 @@ jobs:
           git config --global user.name github-actions[bot]
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Save packages from gc
+        if: success()
+        run: nix profile add .#saveFromGC
+
+      - name: Build
         run: |
           git fetch origin repo || true
 
@@ -50,6 +76,8 @@ jobs:
 
           nix develop . --command just
 
+      - name: Publish
+        run: |
           rm -rf fdroid/.git
 
           git -C fdroid init
@@ -61,9 +89,15 @@ jobs:
           git -C fdroid remote add origin "$(git remote get-url origin)"
           git -C fdroid push --force origin HEAD:repo
 
-      - name: Cleanup old cache entries
+      - name: Cleanup .cache cache
         if: success()
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh cache delete --all
+          set +e
+          gh cache list \
+            --ref "$GITHUB_REF" \
+            --limit 100 \
+            --json id,key \
+            --jq '.[] | select(.key | startswith("cache-")) | .id' |
+          while read -r id; do
+            gh cache delete "$id"
+          done
