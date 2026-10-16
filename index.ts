@@ -4,6 +4,7 @@ import { downloadFile, downloadSequence } from "ipull";
 import { Octokit } from "octokit";
 import PQueue from "p-queue";
 import { link } from "node:fs/promises";
+import { rm } from "node:fs/promises";
 
 type Filter<T extends any[]> =
   | string
@@ -51,10 +52,40 @@ export class Fdroid {
     return this;
   }
 
-  #queue = new PQueue({ concurrency: 1 });
+  #queue = new PQueue({
+    concurrency: 1,
+    autoStart: true,
+  });
 
   #packages = new Map<DownloadEngineNodejs, Metadata>();
 
+  async #ghRelease(
+    owner: string,
+    repo: string,
+    tag?: string,
+    preRelease?: boolean,
+  ) {
+    if (tag) {
+      const { data } = await this.#octokit.rest.repos.getReleaseByTag({
+        owner,
+        repo,
+        tag,
+      });
+      return data;
+    }
+    if (preRelease) {
+      const { data: releases } = await this.#octokit.rest.repos.listReleases({
+        owner,
+        repo,
+      });
+      return releases.find(({ draft }) => !draft);
+    }
+    const { data } = await this.#octokit.rest.repos.getLatestRelease({
+      owner,
+      repo,
+    });
+    return data;
+  }
   gh(cfg: {
     owner: string;
     repo: string;
@@ -67,36 +98,23 @@ export class Fdroid {
         owner: cfg.owner,
         repo: cfg.repo,
       });
-      const { data: author } = await this.#octokit.rest.users.getById({
+      const { data: owner } = await this.#octokit.rest.users.getById({
         account_id: repo.owner.id,
       });
 
-      let release;
-      if (cfg.tag) {
-        const { data } = await this.#octokit.rest.repos.getReleaseByTag({
-          owner: cfg.owner,
-          repo: cfg.repo,
-          tag: cfg.tag,
-        });
-        release = data;
-      } else if (cfg.preRelease) {
-        const { data: releases } = await this.#octokit.rest.repos.listReleases({
-          owner: cfg.owner,
-          repo: cfg.repo,
-        });
-        release = releases.find(({ draft }) => !draft);
-        if (!release) return;
-      } else {
-        const { data } = await this.#octokit.rest.repos.getLatestRelease({
-          owner: cfg.owner,
-          repo: cfg.repo,
-        });
-        release = data;
+      const release = await this.#ghRelease(
+        cfg.owner,
+        cfg.repo,
+        cfg.tag,
+        cfg.preRelease,
+      );
+      if (!release) {
+        return;
       }
 
       const metadata: Omit<Metadata, "url"> = {
-        author: author.name || author.login,
-        email: author.email || undefined,
+        author: owner.name || owner.login,
+        email: owner.email || undefined,
         license: repo.license?.spdx_id || undefined,
         website: repo.homepage ? URL.parse(repo.homepage)?.href : undefined,
         source: repo.html_url,
@@ -119,7 +137,14 @@ export class Fdroid {
         this.#packages.set(
           await downloadFile({
             url,
-            fileName: `${Bun.randomUUIDv5(url, "url", "hex")}.apk`,
+            fileName: [
+              "gh",
+              owner.login,
+              repo.name,
+              release.tag_name,
+              asset.id,
+              asset.name,
+            ].join("_"),
             directory: ".cache",
             skipExisting: true,
           }),
@@ -131,6 +156,7 @@ export class Fdroid {
   }
 
   async build() {
+    this.#queue.start();
     await this.#queue.onIdle();
 
     const downloader = await downloadSequence({
@@ -192,6 +218,7 @@ export class Fdroid {
       .cwd("fdroid");
 
     await this.cleanApkCache();
+    await this.cleanCache();
   }
 
   async cleanApkCache() {
@@ -212,5 +239,24 @@ export class Fdroid {
         2,
       ),
     );
+  }
+
+  async cleanCache() {
+    const packages = new Set(
+      this.#packages.keys()
+        .map(({ finalFileAbsolutePath }) => finalFileAbsolutePath),
+    );
+    for await (
+      const name of new Bun.Glob("**/*").scan({
+        cwd: ".cache",
+        absolute: true,
+        onlyFiles: true,
+      })
+    ) {
+      if (packages.has(name)) {
+        continue;
+      }
+      await rm(name);
+    }
   }
 }

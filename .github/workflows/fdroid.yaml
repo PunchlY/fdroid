@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   apps:
@@ -17,13 +18,23 @@ jobs:
       - uses: actions/checkout@v5
       - uses: cachix/install-nix-action@v31
 
-      - run: |
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: cache-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            cache-
+
+      - name: Setup Git configurations
+        run: |
           git config --global credential.helper store
           echo "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com" > ~/.git-credentials
+          git config --global user.name github-actions[bot]
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
           git fetch origin repo || true
 
           if git show-ref --verify --quiet refs/remotes/origin/repo; then
@@ -42,14 +53,17 @@ jobs:
           rm -rf fdroid/.git
 
           git -C fdroid init
-          git -C fdroid config user.name github-actions[bot]
-          git -C fdroid config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-          git -C fdroid add -A repo tmp/apkcache.json _redirects ':(exclude)repo/*.apk' ':(exclude)repo/diff/'
+          git -C fdroid add -A repo tmp/apkcache.json _redirects ':(exclude)repo/*.apk'
           git -C fdroid commit -m "update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
           git -C fdroid branch -M repo
           git -C fdroid remote add origin "$(git remote get-url origin)"
           git -C fdroid push --force origin HEAD:repo
+
+      - name: Cleanup old cache entries
+        if: success()
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh cache delete --all

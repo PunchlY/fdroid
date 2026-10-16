@@ -1,6 +1,6 @@
 import { Fdroid } from ".";
 
-new Fdroid()
+export default new Fdroid()
   .octokit({
     auth: process.env.GITHUB_TOKEN,
   })
@@ -101,5 +101,4 @@ new Fdroid()
   .gh({
     owner: "xiaoyvyv",
     repo: "bangumi",
-  })
-  .build();
+  });
