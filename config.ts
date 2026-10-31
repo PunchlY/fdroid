@@ -118,4 +118,9 @@ export default new Fdroid()
     url:
       "https://github.com/yezhiyi9670/fake-cross-profile-test/raw/857dfd9/app/release/FakeCrossProfileTest.apk",
     source: "github:yezhiyi9670/fake-cross-profile-test",
+  })
+  .gh({
+    owner: "eltavine",
+    repo: "Duck-Detector-Refactoring",
+    preRelease: true,
   });
