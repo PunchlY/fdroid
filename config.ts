@@ -105,4 +105,12 @@ export default new Fdroid()
   .gh({
     owner: "ravindu644",
     repo: "Droidspaces-OSS",
+  })
+  .gh({
+    owner: "HapeLee",
+    repo: "Matter",
+  })
+  .gh({
+    owner: "HapeLee",
+    repo: "Boxlet",
   });
