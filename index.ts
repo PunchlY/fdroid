@@ -5,6 +5,7 @@ import { Octokit } from "octokit";
 import PQueue from "p-queue";
 import { link } from "node:fs/promises";
 import { rm } from "node:fs/promises";
+import { basename } from "node:path";
 
 type Filter<T extends any[]> =
   | string
@@ -59,78 +60,79 @@ export class Fdroid {
 
   #packages = new Map<DownloadEngineNodejs, Metadata>();
 
-  async #ghRelease(
-    owner: string,
-    repo: string,
-    tag?: string,
-    preRelease?: boolean,
-  ) {
-    if (tag) {
-      const { data } = await this.#octokit.rest.repos.getReleaseByTag({
-        owner,
-        repo,
-        tag,
+  async #mkMetadata(
+    metadata: Omit<Metadata, "url">,
+  ): Promise<Omit<Metadata, "url">> {
+    const github = new URLPattern("github::owner/:repo")
+      .exec(metadata.source)
+      ?.pathname.groups as { owner: string; repo: string } | undefined;
+    if (github) {
+      const { data: repoData } = await this.#octokit.rest.repos.get(github);
+      const { data: ownerData } = await this.#octokit.rest.users.getById({
+        account_id: repoData.owner.id,
       });
-      return data;
+      return {
+        author: ownerData.name || ownerData.login,
+        email: ownerData.email || undefined,
+        license: repoData.license?.spdx_id || undefined,
+        website: repoData.homepage
+          ? URL.parse(repoData.homepage)?.href
+          : undefined,
+        issue: repoData.has_issues ? `${repoData.html_url}/issues` : undefined,
+        changelogUrl: `${repoData.html_url}/releases`,
+        summary: repoData.description || undefined,
+        ...metadata,
+        source: repoData.html_url,
+      };
     }
-    if (preRelease) {
-      const { data: releases } = await this.#octokit.rest.repos.listReleases({
-        owner,
-        repo,
-      });
-      return releases.find(({ draft }) => !draft);
-    }
-    const { data } = await this.#octokit.rest.repos.getLatestRelease({
-      owner,
-      repo,
-    });
-    return data;
+    return metadata;
   }
-  gh(cfg: {
+
+  gh({ owner, repo, tag, preRelease, filter, ...metadata }: {
     owner: string;
     repo: string;
     tag?: string;
     preRelease?: boolean;
     filter?: Filter<[components["schemas"]["release"]]>;
-  }) {
+  } & Omit<Metadata, "url">) {
     this.#queue.add(async () => {
-      const { data: repo } = await this.#octokit.rest.repos.get({
-        owner: cfg.owner,
-        repo: cfg.repo,
-      });
-      const { data: owner } = await this.#octokit.rest.users.getById({
-        account_id: repo.owner.id,
-      });
+      const { data } = tag
+        ? await this.#octokit.rest.repos
+          .getReleaseByTag({
+            owner,
+            repo,
+            tag,
+          })
+        : preRelease
+        ? await this.#octokit.rest.repos
+          .listReleases({
+            owner,
+            repo,
+          })
+        : await this.#octokit.rest.repos
+          .getLatestRelease({
+            owner,
+            repo,
+          });
+      const release = Array.isArray(data)
+        ? data.find(({ draft }) => !draft)
+        : data;
 
-      const release = await this.#ghRelease(
-        cfg.owner,
-        cfg.repo,
-        cfg.tag,
-        cfg.preRelease,
-      );
       if (!release) {
         return;
       }
 
-      const metadata: Omit<Metadata, "url"> = {
-        author: owner.name || owner.login,
-        email: owner.email || undefined,
-        license: repo.license?.spdx_id || undefined,
-        website: repo.homepage ? URL.parse(repo.homepage)?.href : undefined,
-        source: repo.html_url,
-        issue: repo.has_issues ? `${repo.html_url}/issues` : undefined,
-        changelogUrl: `${repo.html_url}/releases`,
-        // changelog: release.body ? Bun.markdown.html(release.body) : undefined,
+      metadata = await this.#mkMetadata({
+        source: `github:${owner}/${repo}`,
         changelog: release.body || undefined,
-        summary: repo.description || undefined,
-        categories: [],
-      };
+        ...metadata,
+      });
 
       for (const asset of release.assets) {
         if (asset.content_type !== "application/vnd.android.package-archive") {
           continue;
         }
-        if (!callFilter(cfg.filter, asset.name, release)) {
+        if (!callFilter(filter, asset.name, release)) {
           continue;
         }
         const url = asset.browser_download_url;
@@ -139,8 +141,8 @@ export class Fdroid {
             url,
             fileName: [
               "gh",
-              owner.login,
-              repo.name,
+              owner,
+              repo,
               release.tag_name,
               asset.id,
               asset.name,
@@ -151,6 +153,32 @@ export class Fdroid {
           { ...metadata, url },
         );
       }
+    });
+    return this;
+  }
+
+  http({ url, ids, ...metadata }: {
+    url: string;
+    ids?: string[];
+  } & Omit<Metadata, "url">) {
+    this.#queue.add(async () => {
+      ids ??= [Bun.randomUUIDv5(url, "url").replaceAll("-", "")];
+      const fileName = basename(
+        Bun.fileURLToPath(new URL(new URL(url).pathname, "file:")),
+      );
+      this.#packages.set(
+        await downloadFile({
+          url,
+          fileName: [
+            "http",
+            ...ids,
+            fileName,
+          ].join("_"),
+          directory: ".cache",
+          skipExisting: true,
+        }),
+        { ...await this.#mkMetadata(metadata), url },
+      );
     });
     return this;
   }
