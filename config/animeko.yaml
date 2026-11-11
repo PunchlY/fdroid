@@ -1,0 +1,4 @@
+type: github
+owner: open-ani
+repo: animeko
+filter: /universal\.apk$/

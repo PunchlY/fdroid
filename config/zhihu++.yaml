@@ -1,0 +1,4 @@
+type: github
+owner: "zly2006"
+repo: "zhihu-plus-plus"
+filter: /^zhihu\+\+-lite\.apk$/

@@ -1,0 +1,4 @@
+type: github
+owner: Nekogram
+repo: Nekogram
+filter: /universal\.apk$/

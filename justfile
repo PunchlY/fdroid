@@ -2,7 +2,7 @@ run: dependencies build
 
 build $config="./config": clean
     mkdir -p fdroid/repo
-    bun -e "(await import(Bun.argv[1])).default.build()" "$config"
+    bun index.ts --config=$config
 
 clean:
     rm -rf fdroid/{repo/*.apk,metadata,tmp/repo_*}

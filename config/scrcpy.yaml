@@ -1,0 +1,4 @@
+type: github
+owner: Miuzarte
+repo: ScrcpyForAndroid
+filter: /universal-release\.apk$/

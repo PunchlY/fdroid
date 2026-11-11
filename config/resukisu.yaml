@@ -1,0 +1,5 @@
+type: github
+owner: ReSukiSU
+repo: ReSukiSU
+preRelease: true
+filter: /universal-release\.apk$/

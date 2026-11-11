@@ -1,0 +1,8 @@
+type: github
+owner: ChaoMixian
+repo: vFlow
+filter:
+  - "app-arm64-v8a-release.apk"
+  - "app-armeabi-v7a-release.apk"
+  - "app-x86-release.apk"
+  - "app-x86_64-release.apk"

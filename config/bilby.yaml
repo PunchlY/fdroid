@@ -1,0 +1,4 @@
+type: github
+owner: NihilDigit
+repo: bilby
+filter: /universal\.apk$/

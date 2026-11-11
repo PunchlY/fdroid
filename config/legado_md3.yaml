@@ -1,0 +1,5 @@
+type: github
+owner: HapeLee
+repo: legado-with-MD3
+preRelease: true
+filter: /-core-universal\.apk$/
