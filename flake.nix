@@ -32,8 +32,15 @@
             enable = true;
             priority = 2;
           };
-
-          programs.deno.enable = true;
+          settings.formatter.bun = {
+            command = "${pkgs.bun}/bin/bun";
+            options = ["fmt" "--"];
+            includes = [
+              "*.ts"
+              "*.yaml"
+              "*.json"
+            ];
+          };
         };
 
         packages.fdroidserver = pkgs.fdroidserver.overrideAttrs (old: {
@@ -57,14 +64,20 @@
           }).package;
 
         devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
-            self'.packages.fdroidserver
-            jdk
-            bun
-            nodejs
-            just
-            apkeditor
-          ];
+          packages = builtins.attrValues {
+            inherit
+              (self'.packages)
+              fdroidserver
+              ;
+            inherit
+              (pkgs)
+              jdk
+              bun
+              nodejs
+              just
+              apkeditor
+              ;
+          };
         };
       };
     });

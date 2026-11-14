@@ -23,23 +23,22 @@ const Schemas = Type.Module({
     Type.Ref("regexp"),
     Type.String({ pattern: "^[^/]" }),
   ]),
-  filter: Type.Union([
-    Type.Ref("_filter"),
-    Type.Array(Type.Ref("_filter")),
-  ]),
+  filter: Type.Union([Type.Ref("_filter"), Type.Array(Type.Ref("_filter"))]),
 
-  meta: Type.Partial(Type.Object({
-    author: Type.String(),
-    email: Type.String({ format: "uri" }),
-    license: Type.String(),
-    website: Type.String({ format: "uri" }),
-    source: Type.String({ format: "uri" }),
-    issue: Type.String({ format: "uri" }),
-    changelogUrl: Type.String({ format: "uri" }),
-    changelog: Type.String(),
-    summary: Type.String(),
-    categories: Type.Array(Type.String()),
-  })),
+  meta: Type.Partial(
+    Type.Object({
+      author: Type.String(),
+      email: Type.String({ format: "uri" }),
+      license: Type.String(),
+      website: Type.String({ format: "uri" }),
+      source: Type.String({ format: "uri" }),
+      issue: Type.String({ format: "uri" }),
+      changelogUrl: Type.String({ format: "uri" }),
+      changelog: Type.String(),
+      summary: Type.String(),
+      categories: Type.Array(Type.String()),
+    }),
+  ),
 
   github: Type.Interface([Type.Ref("meta")], {
     type: Type.Literal("github"),
@@ -56,10 +55,7 @@ const Schemas = Type.Module({
     ids: Type.Array(Type.String(), { default: [] }),
   }),
 
-  config: Type.Union([
-    Type.Ref("github"),
-    Type.Ref("http"),
-  ]),
+  config: Type.Union([Type.Ref("github"), Type.Ref("http")]),
 });
 
 namespace Pattern {
@@ -85,8 +81,8 @@ const octokit = new Octokit({
 const queue = new PQueue();
 
 async function mkMetadata(metadata: StaticDecode<typeof Schemas.meta>) {
-  const github = Pattern.github.exec(metadata.source)
-    ?.pathname.groups as { owner: string; repo: string } | undefined;
+  const github = Pattern.github.exec(metadata.source)?.pathname.groups as
+    { owner: string; repo: string } | undefined;
   if (github) {
     const { data: repoData } = await octokit.rest.repos.get(github);
     const { data: ownerData } = await octokit.rest.users.getById({
@@ -120,7 +116,8 @@ function subst(input: string, args: Record<string, string>) {
     .join("|");
   return input.replace(
     new RegExp(`\\$(${names})|\\$\{(${names})}`),
-    (sub, name0, name = name0) => Object.hasOwn(args, name) ? args[name] : sub,
+    (sub, name0, name = name0) =>
+      Object.hasOwn(args, name) ? args[name] : sub,
   );
 }
 
@@ -131,39 +128,34 @@ function callFilter(
 ) {
   filter = Array.isArray(filter) ? filter : [filter];
   return filter.some((call) =>
-    call instanceof RegExp ? call.test(name) : subst(call, args) === name
+    call instanceof RegExp ? call.test(name) : subst(call, args) === name,
   );
 }
 
-for await (
-  const path of new Bun.Glob("*.{json,toml,yaml,js,ts}").scan({
-    cwd: values.config,
-    absolute: true,
-  })
-) {
+for await (const path of new Bun.Glob("*.{json,toml,yaml,js,ts}").scan({
+  cwd: values.config,
+  absolute: true,
+})) {
   const config = Value.Decode(Schemas.config, await import(path));
   switch (config.type) {
     case "github":
       queue.add(async () => {
         const { owner, repo, tag, preRelease, filter } = config;
         const { data } = tag
-          ? await octokit.rest.repos
-            .getReleaseByTag({
+          ? await octokit.rest.repos.getReleaseByTag({
               owner,
               repo,
               tag,
             })
           : preRelease
-          ? await octokit.rest.repos
-            .listReleases({
-              owner,
-              repo,
-            })
-          : await octokit.rest.repos
-            .getLatestRelease({
-              owner,
-              repo,
-            });
+            ? await octokit.rest.repos.listReleases({
+                owner,
+                repo,
+              })
+            : await octokit.rest.repos.getLatestRelease({
+                owner,
+                repo,
+              });
         const release = Array.isArray(data)
           ? data.find(({ draft }) => !draft)
           : data;
@@ -230,7 +222,7 @@ for await (
             directory: ".cache",
             skipExisting: true,
           }),
-          { ...await mkMetadata(config), url },
+          { ...(await mkMetadata(config)), url },
         );
       });
       break;
@@ -240,24 +232,28 @@ for await (
 queue.start();
 await queue.onIdle();
 
-const downloader = await downloadSequence({
-  cliProgress: true,
-}, ...packages.keys());
+const downloader = await downloadSequence(
+  {
+    cliProgress: true,
+  },
+  ...packages.keys(),
+);
 
 await downloader.download();
 
 const redirects = Bun.file("./fdroid/_redirects").writer();
 
 for await (const [pkg, meta] of packages) {
-  const [info]: [{
-    package: string;
-    VersionCode: number;
-    VersionName: string;
-    AppName: string;
-    AppIcon: string;
-  }] = await Bun
-    .$`APKEditor info -t json -i ${pkg.finalFileAbsolutePath} -package -app-name -app-icon -version-code -version-name`
-    .json();
+  const [info]: [
+    {
+      package: string;
+      VersionCode: number;
+      VersionName: string;
+      AppName: string;
+      AppIcon: string;
+    },
+  ] =
+    await Bun.$`APKEditor info -t json -i ${pkg.finalFileAbsolutePath} -package -app-name -app-icon -version-code -version-name`.json();
 
   const hasher = new Bun.CryptoHasher("sha256");
   for await (const chunk of Bun.file(pkg.finalFileAbsolutePath).stream()) {
@@ -270,8 +266,8 @@ for await (const [pkg, meta] of packages) {
 
   await redirects.write(`/repo/${packageFile} ${meta.url}\n`);
 
-  await Bun.file(`fdroid/metadata/${info.package}.yml`)
-    .write(Bun.YAML.stringify(
+  await Bun.file(`fdroid/metadata/${info.package}.yml`).write(
+    Bun.YAML.stringify(
       {
         Name: info.AppName,
         AuthorName: meta.author,
@@ -286,7 +282,8 @@ for await (const [pkg, meta] of packages) {
       },
       null,
       2,
-    ));
+    ),
+  );
   if (meta.changelog) {
     await Bun.file(
       `fdroid/metadata/${info.package}/en-US/changelogs/${info.VersionCode}.txt`,
@@ -296,8 +293,9 @@ for await (const [pkg, meta] of packages) {
 
 await redirects.end();
 
-await Bun.$`fdroid update --use-date-from-apk --delete-unknown --pretty`
-  .cwd("fdroid");
+await Bun.$`fdroid update --use-date-from-apk --delete-unknown --pretty`.cwd(
+  "fdroid",
+);
 
 const apkcache = await Bun.file("./fdroid/tmp/apkcache.json").json();
 await Bun.write(
@@ -318,16 +316,13 @@ await Bun.write(
 );
 
 const packagesFile = new Set(
-  packages.keys()
-    .map(({ finalFileAbsolutePath }) => finalFileAbsolutePath),
+  packages.keys().map(({ finalFileAbsolutePath }) => finalFileAbsolutePath),
 );
-for await (
-  const name of new Bun.Glob("**/*").scan({
-    cwd: ".cache",
-    absolute: true,
-    onlyFiles: true,
-  })
-) {
+for await (const name of new Bun.Glob("**/*").scan({
+  cwd: ".cache",
+  absolute: true,
+  onlyFiles: true,
+})) {
   if (packagesFile.has(name)) {
     continue;
   }
