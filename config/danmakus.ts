@@ -29,6 +29,8 @@ export const url = new URL(
 
 export const summary = "在手机上查看直播弹幕、主播动态与数据分析。";
 
+export const website = "https://danmakus.com/";
+
 export const changelog = release.notes.join("\n");
 
 export const ids = [release.versionCode, release.publishedAt];
