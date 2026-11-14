@@ -10,21 +10,25 @@ import { basename } from "node:path";
 import { link, rm } from "node:fs/promises";
 import { parseArgs } from "node:util";
 
-namespace Schemas {
-  export const args = Type.Object({
-    config: Type.String(),
-  });
-
-  const strRegexp = Type.Codec(
+const Schemas = Type.Module({
+  regexp: Type.Decode(
     Type.String({ pattern: "^/.+/[dgimsuvy]*$" }),
-  )
-    .Decode((value) => {
+    (value) => {
       const match = value.match(/^\/(.+)\/([dgimsuvy]*)$/s)!;
       return new RegExp(match[1], match[2]);
-    })
-    .Encode((value) => value.toString());
+    },
+  ),
+  _filter: Type.Union([
+    Type.InstanceType(RegExp),
+    Type.Ref("regexp"),
+    Type.String({ pattern: "^[^/]" }),
+  ]),
+  filter: Type.Union([
+    Type.Ref("_filter"),
+    Type.Array(Type.Ref("_filter")),
+  ]),
 
-  export const meta = Type.Partial(Type.Object({
+  meta: Type.Partial(Type.Object({
     author: Type.String(),
     email: Type.String({ format: "uri" }),
     license: Type.String(),
@@ -35,38 +39,37 @@ namespace Schemas {
     changelog: Type.String(),
     summary: Type.String(),
     categories: Type.Array(Type.String()),
-  }));
+  })),
 
-  const filter = Type.Partial(Type.Object({
-    filter: Type.Union([
-      strRegexp,
-      Type.Array(Type.String()),
-    ]),
-  }));
-
-  export const github = Type.Interface([meta, filter], {
+  github: Type.Interface([Type.Ref("meta")], {
     type: Type.Literal("github"),
     owner: Type.String(),
     repo: Type.String(),
     tag: Type.Optional(Type.String()),
-    preRelease: Type.Optional(Type.Boolean({ default: false })),
-  });
+    preRelease: Type.Boolean({ default: false }),
+    filter: Type.Optional(Type.Ref("filter")),
+  }),
 
-  export const http = Type.Interface([meta, filter], {
+  http: Type.Interface([Type.Ref("meta")], {
     type: Type.Literal("http"),
     url: Type.String({ format: "uri" }),
-    ids: Type.Optional(Type.Array(Type.String())),
-  });
+    ids: Type.Array(Type.String(), { default: [] }),
+  }),
 
-  export const config = Type.Union([github, http]);
-}
+  config: Type.Union([
+    Type.Ref("github"),
+    Type.Ref("http"),
+  ]),
+});
 
 namespace Pattern {
   export const github = new URLPattern("github::owner/:repo");
 }
 
 const values = Schema.Parse(
-  Schemas.args,
+  Type.Object({
+    config: Type.String(),
+  }),
   parseArgs({
     args: process.argv.slice(2),
     options: {
@@ -122,19 +125,18 @@ function subst(input: string, args: Record<string, string>) {
 }
 
 function callFilter(
-  filter: RegExp | string[] | undefined,
+  filter: StaticDecode<typeof Schemas.filter>,
   name: string,
   args: Record<string, string>,
 ) {
-  return filter === undefined
-    ? true
-    : filter instanceof RegExp
-    ? filter.test(name)
-    : filter.some((value) => subst(value, args) === name);
+  filter = Array.isArray(filter) ? filter : [filter];
+  return filter.some((call) =>
+    call instanceof RegExp ? call.test(name) : subst(call, args) === name
+  );
 }
 
 for await (
-  const path of new Bun.Glob("*.yaml").scan({
+  const path of new Bun.Glob("*.{json,toml,yaml,js,ts}").scan({
     cwd: values.config,
     absolute: true,
   })
@@ -183,6 +185,7 @@ for await (
             continue;
           }
           if (
+            filter !== undefined &&
             !callFilter(filter, asset.name, {
               tag_name: release.tag_name,
             })
@@ -211,10 +214,7 @@ for await (
       break;
     case "http":
       queue.add(async () => {
-        const {
-          url,
-          ids = [Bun.randomUUIDv5(url, "url").replaceAll("-", "")],
-        } = config;
+        const { url, ids = [] } = config;
         const fileName = basename(
           Bun.fileURLToPath(new URL(new URL(url).pathname, "file:")),
         );
@@ -223,6 +223,7 @@ for await (
             url,
             fileName: [
               "http",
+              Bun.randomUUIDv5(url, "url").replaceAll("-", ""),
               ...ids,
               fileName,
             ].join("_"),
